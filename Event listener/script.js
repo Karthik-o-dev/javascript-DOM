@@ -71,6 +71,13 @@ loginForm.addEventListener("submit", function (event) {
 const un = document.getElementById("username");
 const count = document.getElementById("count");
 un.addEventListener("input", function (event) {
-    console.log(event.target.value)
+    // console.log(event.target.value)
+    const len = event.target.value.length;
+    if (len < 5) {
+        count.innerText = "min 5 char"
+    } else {
+        count.innerText = ""
+    }
 })
+
 
