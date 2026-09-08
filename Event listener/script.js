@@ -81,3 +81,19 @@ un.addEventListener("input", function (event) {
 })
 
 
+const mouseFollow = document.createElement("div");
+const ms = mouseFollow.style;
+mouseFollow.id = "mf";
+ms.height = "40px";
+ms.width = "40px";
+ms.backgroundColor = "red";
+ms.position = "absolute";
+ms.top = "0"
+ms.left = "0"
+ms.transition = "0.05s";
+document.body.appendChild(mouseFollow)
+
+document.addEventListener("mousemove", function (event) {
+    ms.top = event.clientY + "px";
+    ms.left = event.clientX + "px";
+});
