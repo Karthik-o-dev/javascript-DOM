@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="app.css">
+
+</head>
+
+<body>
+    <div class="flex justify-center m-10 flex-col items-center gap-5">
+        <form id="form" class="flex flex-col gap-5 w-full max-w-[500px]">
+            <label for="todoForm">Enter the Task</label>
+            <input type="text" id="todoForm" name="todoForm" placeholder="Enter the todoList..."
+                class="border-gray-300 border-2 w-full px-10 py-3">
+            <span id="error"></span>
+            <button type="submit" class="bg-blue-300 p-3">Submit</button>
+        </form>
+        <div>
+            <ul id="list"></ul>
+        </div>
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>
