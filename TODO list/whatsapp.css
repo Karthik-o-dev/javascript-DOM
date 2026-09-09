@@ -1,0 +1,36 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid gray;
+    width: 400px;
+    border-radius: 10px;
+}
+
+.child {
+    border-bottom: 1px solid gray;
+    display: flex;
+    gap: 15px;
+    padding: 10px;
+
+}
+
+.img {
+    border-radius: 50%;
+}
+
+.innerText {
+    flex: 1;
+}
+
+.innerDiv {
+    display: flex;
+    justify-content: space-between;
+}
+
+.innerDiv p {
+    margin: 0;
+}
+
+.innerDiv_2 p {
+    margin: 50px 0;
+}
