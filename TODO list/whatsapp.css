@@ -4,6 +4,7 @@
     border: 2px solid gray;
     width: 400px;
     border-radius: 10px;
+    margin-left: 50px;
 }
 
 .child {
@@ -31,6 +32,21 @@
     margin: 0;
 }
 
+.innerDiv_2 {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
 .innerDiv_2 p {
     margin: 0;
+    color: gray;
+    font-size: 15px;
+}
+
+.innerDiv_2 span {
+    margin-right: 10px;
+    background-color: rgb(57, 202, 57);
+    padding: 2px;
+    border-radius: 50px;
 }
