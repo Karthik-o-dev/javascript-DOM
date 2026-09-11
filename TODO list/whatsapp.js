@@ -61,7 +61,8 @@ const users = [
         message: "how are you?",
         image: "./assets/place2.png",
         notification: 20
-    }];
+    }
+];
 
 
 let len = users.length;

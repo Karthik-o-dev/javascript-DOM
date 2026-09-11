@@ -1,8 +1,23 @@
+const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+const filter = (array = [], callback) => {
+    for (let i = 0; i < array.length; i++) {
+        if (array[i] % 2 == 1) {
+            callback(array[i])
+        }
+    }
+}
+const res = [];
+const handleFilter = (element) => {
+    res.push(element);
+}
+
+filter(array, handleFilter)
+console.log(res)
 // array methods
 
 // forEach
 
-const array = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
 array.forEach(function (element, index, arr) {
     console.log(element, index, arr)
