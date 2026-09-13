@@ -143,6 +143,8 @@ console.log(res_17)
 const res_18 = employees.reduce((total, employee) => total + employee.age, 0)
 console.log(res_18)
 
+// qs19
+
 const res_19 = employees.filter(employee => employee.salary >= 60000 && employee.salary <= 80000).map(employee => employee.name)
 console.log(res_19)
 
