@@ -23,8 +23,8 @@ const createTodo = (todo) => {
     const todoObj = {
         id: uuid(),
         title: todo,
-        createdAt: dateTime,       // fixed
-        updatedAt: dateTime,       // fixed
+        createdAt: dateTime,
+        updatedAt: dateTime,
         status: "Pending"
     };
 
@@ -39,15 +39,13 @@ const handleRemoveTask = (id) => {
 };
 
 const toggleStatus = (id) => {
-    const updated = todoArray.map((todo) => {
-        if (todo.id == id) {
+    todoArray.forEach((todo) => {
+        if (todo.id === id) {
             todo.status =
-                todo.status == "Pending"
+                todo.status === "Pending"
                     ? "Completed"
                     : "Pending";
         }
-
-        return todo;
     });
 };
 
@@ -94,12 +92,12 @@ const updateList = (todo) => {
         todo.title +
         " /></div>" +
 
-        "<div><b>Status:</b> " +
+        "<div><b>Status:</b> <span class ='status'> " +
         todo.status +
-        "</div>" +
+        "</span> </div>" +
 
         "<div><b>Time:</b> " +
-        todo.createdAt +       // fixed
+        todo.createdAt +
         "</div>" +
 
         "<br><button class='update-btn' id='update_btn'>Update</button>";
@@ -156,6 +154,10 @@ const updateList = (todo) => {
 
     statusButton.addEventListener("click", () => {
         toggleStatus(todo.id);
+
+        const statusElement = li.querySelector(".status");
+
+        statusElement.textContent = todo.status;
     });
 
 
