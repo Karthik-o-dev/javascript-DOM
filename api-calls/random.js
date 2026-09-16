@@ -38,9 +38,11 @@ async function api_call() {
         console.log("Completed")
     }
 
-    button.addEventListener("click", () => {
-        api_call();
-    })
+
 }
+
+button.addEventListener("click", () => {
+    api_call();
+})
 api_call();
 
