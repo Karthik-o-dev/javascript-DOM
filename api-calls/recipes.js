@@ -44,6 +44,14 @@ getAllProduct().then(products => {
         button.innerHTML = "Add to cart";
         button.classList.add("button")
 
+        button.addEventListener("mouseover", () => {
+            img.src = image[1] ? image[1] : main_img
+        })
+
+        button.addEventListener("mouseleave", () => {
+            img.src = main_img
+        })
+
         const price = document.createElement("div")
         price.classList.add("price-div")
 
