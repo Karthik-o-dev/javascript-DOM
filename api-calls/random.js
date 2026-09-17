@@ -11,7 +11,7 @@ const button = document.createElement("button")
 button.classList.add("button")
 button.innerHTML = "Click for random user"
 
-container.appendChild(img);
+container.appendChild(img)
 container.appendChild(name)
 container.appendChild(Email)
 container.appendChild(button)
@@ -45,4 +45,3 @@ button.addEventListener("click", () => {
     api_call();
 })
 api_call();
-
