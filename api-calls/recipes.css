@@ -1,12 +1,102 @@
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0px 2px 3px gray;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: white;
+
+    position: sticky;
+    top: 0;
+}
+
+header div {
+    margin-left: 70px;
+    font-size: 25px;
+    font-family: "Lobster Two", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 100px;
+    gap: 50px;
+    list-style: none;
+}
+
+nav ul li {
+    cursor: pointer;
+}
+
 .container {
     display: grid;
     grid-template-columns: 1fr;
     gap: 10px;
+    padding-inline: 100px;
 }
 
-.child {
-    border: 1px solid gray;
+.product_container {
+    box-shadow: 2px 2px 3px gray;
     border-radius: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+img {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+}
+
+img:hover {
+    transform: scale(1.1);
+}
+
+.price-div {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.price-div b {
+    color: green;
+}
+
+.price-div s {
+    color: gray;
+}
+
+button {
+    width: 100%;
+    border-radius: 8px;
+    border: none;
+    background-color: rgb(163, 233, 59);
+    padding: 10px;
+    font-family: "DM Sans", sans-serif;
+    font-weight: bold;
+    margin-top: 10px;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+button:hover {
+    transform: scale(1.05);
+
 }
 
 @media screen and (min-width:576px) {
