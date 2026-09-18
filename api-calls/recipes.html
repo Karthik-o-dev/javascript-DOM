@@ -13,6 +13,9 @@
         rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Lobster+Two:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
 </head>
 
 <body>
@@ -22,11 +25,20 @@
             <ul>
                 <li>About</li>
                 <li style="font-weight: bold;">Products</li>
-                <li>Cart</li>
+                <li>Contact</li>
             </ul>
         </nav>
+        <div class="cart-container" id="cart-icon-btn">
+            <span class="fa-solid fa-cart-shopping"></span>
+            <span class="cart_count" id="cart-count"></span>
+        </div>
     </header>
-    <div class="container" id="parent"></div>
+
+    <div class="container" id="parent">
+        <section class="loading" id="loading">
+            <div></div>
+        </section>
+    </div>
 
     <script src="./recipes.js"></script>
 </body>

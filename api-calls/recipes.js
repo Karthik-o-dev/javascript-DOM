@@ -21,8 +21,13 @@ const getAllProduct = async () => {
 }
 
 const parent = document.getElementById("parent");
+parent.style.display = "flex";
+
+const loading = document.getElementById("loading")
 
 getAllProduct().then(products => {
+    loading.style.display = "none";
+    parent.style.display = "grid"
     products.forEach(product => {
 
         const disPrice = product.price * (1 - product.discountPercentage / 100);
