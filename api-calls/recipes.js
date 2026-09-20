@@ -1,3 +1,5 @@
+const cart_item = [];
+
 const base_url = "https://dummyjson.com"
 
 const get_api = (end_point) => {
@@ -24,6 +26,7 @@ const parent = document.getElementById("parent");
 parent.style.display = "flex";
 
 const loading = document.getElementById("loading")
+const cartCount = document.getElementById("cart-count")
 
 getAllProduct().then(products => {
     loading.style.display = "none";
@@ -57,6 +60,39 @@ getAllProduct().then(products => {
             img.src = main_img
         })
 
+        const qtyWrapper = document.createElement("div")
+        qtyWrapper.classList.add("qty-container")
+        qtyWrapper.style.display = "none"
+
+        const qty_span = document.createElement("span")
+        qty_span.innerHTML = 1;
+        qty_span.classList.add("qty")
+
+        const qtydecre = document.createElement("button")
+        qtydecre.innerHTML = "-"
+        qtydecre.classList.add("qty-button")
+
+        const qtyincre = document.createElement("button")
+        qtyincre.innerHTML = "+";
+        qtyincre.classList.add("qty-button")
+
+
+        button.addEventListener("click", () => {
+            const itemIntex = cart_item.findIndex(item => item.id === product.id)
+            if (itemIntex == -1) {
+                cart_item.push({ ...product, qty: 1 });
+                cartCount.innerHTML = cart_item.length;
+                qtyWrapper.style.display = "flex"
+                button.style.display = "none"
+                cartCount.classList.add("bumb");
+                setTimeout(() => {
+                    cartCount.classList.remove("bumb")
+                }, 300);
+            } else {
+                cart_item[itemIntex].qty += 1;
+            }
+        })
+
         const price = document.createElement("div")
         price.classList.add("price-div")
 
@@ -67,6 +103,50 @@ getAllProduct().then(products => {
         rating.innerHTML = "<span>" + product.rating + "</span>"
 
 
+
+
+        qtydecre.addEventListener("click", () => {
+            const itemIntex = cart_item.findIndex(item => item.id === product.id)
+
+            if (itemIntex == -1) return
+
+            if (cart_item[itemIntex].qty <= 1) {
+                qtyWrapper.style.display = "none";
+                button.style.display = "block";
+                cart_item.splice(itemIntex, 1)
+                return;
+            }
+            cart_item[itemIntex].qty -= 1;
+            qty_span.innerHTML = cart_item[itemIntex].qty;
+
+            cartCount.innerHTML = cart_item.reduce(
+                (total, item) => total + item.qty,
+                0
+            );
+
+
+
+        })
+
+
+
+        qtyincre.addEventListener("click", () => {
+            const itemIntex = cart_item.findIndex(item => item.id === product.id)
+            if (itemIntex == -1) return
+            cart_item[itemIntex].qty += 1;
+            qty_span.innerHTML = cart_item[itemIntex].qty;
+            cartCount.innerHTML = cart_item.reduce(
+                (total, item) => total + item.qty,
+                0);
+        })
+
+        qtyWrapper.appendChild(qtydecre)
+        qtyWrapper.appendChild(qty_span)
+        qtyWrapper.appendChild(qtyincre)
+
+
+
+
         price.appendChild(ogPrice)
         price.appendChild(rating)
 
@@ -74,6 +154,8 @@ getAllProduct().then(products => {
         productContainer.appendChild(title);
         productContainer.appendChild(price);
         productContainer.appendChild(button);
+
+        productContainer.appendChild(qtyWrapper)
 
         parent.appendChild(productContainer)
     });

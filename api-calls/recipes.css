@@ -38,15 +38,52 @@ nav ul li {
     cursor: pointer;
 }
 
-.cart_container {
+.cart-container {
     position: relative;
     cursor: pointer;
-    border: 1px solid gray;
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
     border-radius: 50%;
     width: 48px;
     height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
+.cart-container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
 
+.cart-container .material-symbols-outlined {
+    font-size: 24px;
+    color: var(--text-main);
+}
+
+.cart-count {
+    position: absolute;
+    top: -4px;
+    right: -4px;
+    background-color: var(--accent-color);
+    color: #ffffff;
+    font-size: 0.75rem;
+    font-weight: 700;
+    min-width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2px;
+    border: 2px solid var(--bg-color);
+    transition: transform 0.2s ease;
+}
+
+.cart-count.bump {
+    transform: scale(1.3);
 }
 
 .loading {
@@ -138,6 +175,51 @@ button:hover {
     transform: scale(1.05);
 
 }
+
+.qty-container {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    padding-top: 1.7rem;
+}
+
+.qty-button {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    border: 1px solid black;
+    background-color: white;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+    user-select: none;
+}
+
+.qty-button:hover {
+    background-color: #f1f5f9;
+    border-color: #cbd5e1;
+}
+
+.qty-button:active {
+    transform: scale(0.95);
+}
+
+.qty {
+    font-size: 1rem;
+    font-weight: 600;
+    color: black;
+    min-width: 24px;
+    text-align: center;
+    display: inline-block;
+}
+
+
+
 
 @media screen and (min-width:576px) {
     .container {
