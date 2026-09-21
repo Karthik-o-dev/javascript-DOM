@@ -16,8 +16,14 @@ const request = async (url) => {
     }
 }
 
+let limit = 10;
+let page = 1
+let skip = ((page - 1) * limit);
+
 const getAllProduct = async () => {
-    const api = get_api("/products?skip=85")
+    page++;
+    let skip = ((page - 1) * limit);
+    const api = get_api("/products?skip=" + skip + "&limit=" + limit);
     const response = await request(api)
     return response.products;
 }
@@ -28,7 +34,7 @@ parent.style.display = "flex";
 const loading = document.getElementById("loading")
 const cartCount = document.getElementById("cart-count")
 
-getAllProduct().then(products => {
+const handleProductList = () => getAllProduct().then(products => {
     loading.style.display = "none";
     parent.style.display = "grid"
     products.forEach(product => {
@@ -108,7 +114,7 @@ getAllProduct().then(products => {
         qtydecre.addEventListener("click", () => {
             const itemIntex = cart_item.findIndex(item => item.id === product.id)
 
-            if (itemIntex == -1) return
+            if (itemIntex == -1) return;
 
             if (cart_item[itemIntex].qty <= 1) {
                 qtyWrapper.style.display = "none";
@@ -157,6 +163,19 @@ getAllProduct().then(products => {
 
         productContainer.appendChild(qtyWrapper)
 
-        parent.appendChild(productContainer)
+        parent.appendChild(productContainer);
     });
 })
+
+handleProductList();
+
+const newPage = document.createElement("p");
+
+newPage.innerHTML = "Load More";
+newPage.style.textAlign = "center";
+newPage.style.cursor = "pointer";
+newPage.addEventListener("click", () => {
+    handleProductList();
+})
+
+document.body.appendChild(newPage);
