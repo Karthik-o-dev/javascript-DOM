@@ -10,7 +10,6 @@
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
         crossorigin="anonymous" referrerpolicy="no-referrer">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="./style.css">
 
 </head>
 
@@ -30,23 +29,46 @@
             <button class="border border-gray-200 p-2 px-4 rounded-xl font-semibold" id="login-button">Login</button>
             <section id="login">
                 <form action="" class="bg-white rounded-lg  p-15">
-                    <p class="text-3xl text-center font-bold">LOGIN</p>
+                    <p class="text-3xl text-center font-bold">Welcome Back...</p>
                     <div class="m-5">
-                        <label for="Name" class="font-semibold mr-2">Name :</label>
-                        <input type="text" placeholder="Enter your name..."
-                            class="border border-gray-300 p-3 rounded-md">
-                    </div>
-                    <div class="m-5">
-                        <label for="email" class="font-semibold mr-3">Email :</label>
+                        <label for="email" class="font-semibold mr-9">Email :</label>
                         <input type="email" placeholder="Enter your email..."
-                            class="border border-gray-300 p-3 rounded-md">
+                            class="border border-gray-300 p-3 rounded-md" required>
+                    </div>
+
+                    <div class="m-5">
+                        <label for="Name" class="font-semibold mr-2">Password :</label>
+                        <input type="password" placeholder="Enter your password"
+                            class="border border-gray-300 p-3 rounded-md" required>
                     </div>
                     <button class="w-full bg-green-200 p-3 rounded-md ">submit</button>
 
                 </form>
             </section>
 
-            <button class="border border-gray-200 p-2 px-4 rounded-xl font-semibold">Sign Up</button>
+            <button class="border border-gray-200 p-2 px-4 rounded-xl font-semibold" id="signUpBtn">Sign Up</button>
+            <section id="signUp">
+                <form action="" class="bg-white rounded-lg  p-15">
+                    <p class="text-3xl text-center font-bold">Sign Up</p>
+                    <div class="m-5">
+                        <label for="Name" class="font-semibold mr-8">Name :</label>
+                        <input type="text" placeholder="Enter your name..."
+                            class="border border-gray-300 p-3 rounded-md" required>
+                    </div>
+                    <div class="m-5">
+                        <label for="email" class="font-semibold mr-9">Email :</label>
+                        <input type="email" placeholder="Enter your email..."
+                            class="border border-gray-300 p-3 rounded-md" required>
+                    </div>
+                    <div class="m-5">
+                        <label for="password" class="font-semibold mr-2">Password :</label>
+                        <input type="password" placeholder="Enter your password"
+                            class="border border-gray-300 p-3 rounded-md" required>
+                    </div>
+                    <button class="w-full bg-green-200 p-3 rounded-md ">submit</button>
+
+                </form>
+            </section>
         </div>
     </header>
 
@@ -67,7 +89,26 @@
                 <img src="./assets/hero-section.png" alt="Hero-image" class="">
             </div>
         </section>
+
+        <section>
+            <p class="font-semibold text-6xl text-center">Food categories</p>
+            <div id="categories" class="categories">
+
+            </div>
+            <button class="bg-green-300 p-2 px-4 m-3 w-full max-w-[1200px] rounded-lg"><a href="./menu"></a>Explore
+                Menu</button>
+        </section>
     </main>
+
+    <footer class="bg-black p-5">
+        <p class="text-white text-center text-[12px]">By continuing past this page, you agree to our Terms of Service,
+            Cookie
+            Policy,
+            Privacy
+            Policy and Content
+            Policies. All trademarks are properties of their respective owners
+            2008-2026 &copy; Zomato™ Ltd. All rights reserved.</p>
+    </footer>
 
 
     <script src="./script.js"></script>

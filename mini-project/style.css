@@ -1,12 +1,59 @@
-#login {
+#login,
+#signUp {
     position: fixed;
     top: 0;
     left: 0;
     height: 100Vh;
     width: 100vw;
-    background-color: rgba(0, 255, 255, 0.34);
+    background-color: rgba(119, 132, 132, 0.34);
     display: none;
     justify-content: center;
     align-items: center;
 
+}
+
+.categories {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 50px;
+}
+
+.recipes_Container {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px gray;
+}
+
+.image-container {
+    aspect-ratio: 1/1;
+    width: 100%;
+    object-fit: cover;
+    transition: 0.5s;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+img:hover {
+    transform: scale(1.02);
+}
+
+@media screen and (min-width:576px) {
+    .categories {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (min-width:992px) {
+    .categories {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media screen and (min-width:1200px) {
+    .categories {
+        grid-template-columns: repeat(4, 1fr);
+    }
 }
