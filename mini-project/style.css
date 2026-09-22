@@ -1,0 +1,12 @@
+#login {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100Vh;
+    width: 100vw;
+    background-color: rgba(0, 255, 255, 0.34);
+    display: none;
+    justify-content: center;
+    align-items: center;
+
+}
