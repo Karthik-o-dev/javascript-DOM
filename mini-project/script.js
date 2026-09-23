@@ -26,7 +26,7 @@ const request = async (url) => {
 }
 
 const getAllRecipes = async () => {
-    const api = get_api("/recipes?skip=10");
+    const api = get_api("/recipes?skip=10&limit=4")
     const response = await request(api)
     return response.recipes;
 }
@@ -58,3 +58,24 @@ getAllRecipes().then(recipes => {
 
     });
 })
+
+// const specialFoods = [
+//     {
+//         name: "Biriyani",
+//         image: "./assets/specials/biriyani.png"
+//     },
+//     {
+//         name: "Biriyani",
+//         image: "./assets/specials/biriyani.png"
+//     },
+//     {
+//         name: "Biriyani",
+//         image: "./assets/specials/biriyani.png"
+//     },
+//     {
+//         name: "Biriyani",
+//         image: "./assets/specials/biriyani.png"
+//     }
+// ];
+
+// specialFoods
