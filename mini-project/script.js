@@ -58,24 +58,3 @@ getAllRecipes().then(recipes => {
 
     });
 })
-
-// const specialFoods = [
-//     {
-//         name: "Biriyani",
-//         image: "./assets/specials/biriyani.png"
-//     },
-//     {
-//         name: "Biriyani",
-//         image: "./assets/specials/biriyani.png"
-//     },
-//     {
-//         name: "Biriyani",
-//         image: "./assets/specials/biriyani.png"
-//     },
-//     {
-//         name: "Biriyani",
-//         image: "./assets/specials/biriyani.png"
-//     }
-// ];
-
-// specialFoods

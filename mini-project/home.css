@@ -1,0 +1,16 @@
+.dishes {
+    background-color: white;
+    border-radius: 20px;
+}
+
+.dishes img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.dishes h2 {
+    font-weight: 600;
+}

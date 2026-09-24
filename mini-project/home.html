@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="./home.css">
+
+</head>
+
+<body class="bg-[#E8FFEF]">
+    <header class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2">
+        <div class="flex items-center">
+            <img src="./assets/title.png" alt="title" class="h-8">
+
+            <div>
+                <h1 class="font-semibold text-lg">Crave & Co.</h1>
+                <h2 class="text-[10px]">Good Food. Great Mood.</h2>
+            </div>
+
+        </div>
+
+        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-[100px]">
+            <ul class="flex items-center gap-8 font-semibold text-gray-500">
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Orders</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex gap-3">
+            <button class="p-2 px-5 rounded-[100px] font-semibold">Login</button>
+            <button class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- hero-section -->
+        <section class="flex px-10 my-10">
+            <div class="w-full">
+                <p class="bg-[#D8F7E3] inline-block p-1 px-3 rounded-full text-[12px] font-semibold">• GOOD FOOD • GREAT
+                    MOOD</p>
+                <p class="font-extrabold text-6xl m-2">Discover Your Next</p>
+                <p class="font-extrabold text-6xl text-amber-900 m-3">Favorite Meal</p>
+                <p class="text-[18px] text-gray-500 mt-5">From comforting neighborhood classics to fresh chef-inspired
+                    creations, explore a
+                    menu tailored for
+                    every authentic craving. Freshly prepared, responsibly sourced, and brought hot to your table.</p>
+
+                <div class="my-5 flex gap-6">
+                    <button class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold">Explore Menu<i
+                            class="fa-solid fa-utensils ml-2"></i></button>
+                    <button class="bg-white p-2 px-5 rounded-[100px] text-black font-semibold"><i
+                            class="fa-regular fa-truck mr-2"></i>Order Now</i></button>
+                </div>
+            </div>
+
+            <div class="flex justify-center items-center w-full mt-10 ">
+                <img src="./assets/hero-section.png" alt="hero" class="rounded-[50px] border-15 border-gray-200">
+            </div>
+
+        </section>
+
+        <!-- explore menu -->
+        <section class="px-10 my-20">
+            <div class="flex justify-between items-center">
+                <div class="flex flex-col">
+                    <p class="text-amber-900 font-semibold">Curated Collections</p>
+                    <p class="font-bold text-4xl ">Explore Our Menu</p>
+                    <p class="text-gray-500">Something exceptionally delicious for every moment of the day.</p>
+                </div>
+                <div class="flex items-end">
+                    <button class="text-amber-900 font-semibold">View all items<i
+                            class="fa-solid fa-arrow-right-long ml-2"></i></button>
+                </div>
+            </div>
+            <div class="grid grid-cols-4 my-8 gap-4">
+                <div class="bg-white p-3 rounded-2xl">
+                    <div><img src="./assets/menu/menu2.png" alt="menu1" class="rounded-xl"></div>
+                    <div class="flex justify-between items-center my-2">
+                        <p class="font-semibold">Main Course</p>
+                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl">
+                    <div><img src="./assets/menu/menu3.png" alt="menu1" class="rounded-xl"></div>
+                    <div class="flex justify-between items-center my-2">
+                        <p class="font-semibold">Fast Food & Buns</p>
+                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl">
+                    <div><img src="./assets/menu/menu4.png" alt="menu1" class="rounded-xl"></div>
+                    <div class="flex justify-between items-center my-2">
+                        <p class="font-semibold">Artisan Desserts</p>
+                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl">
+                    <div><img src="./assets/menu/menu1.png" alt="menu1" class="rounded-xl"></div>
+                    <div class="flex justify-between items-center my-2">
+                        <p class="font-semibold">Breakfast & Brunch</p>
+                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section class="px-10 my-20">
+            <div class="flex justify-between items-center">
+                <div class="flex flex-col">
+                    <p class="text-amber-900 font-semibold">Crowd Favorites</p>
+                    <p class="font-bold text-4xl ">Popular Dishes</p>
+                    <p class="text-gray-500">Customer-voted creations with the highest reorder frequency.</p>
+                </div>
+                <div class="flex items-end">
+                    <button class="text-gray-700 font-semibold">Browse Full Catalog<i
+                            class="fa-solid fa-arrow-right-long ml-2"></i></button>
+                </div>
+            </div>
+            <div id="popular-dishes" class="grid grid-cols-4 gap-4 my-8"></div>
+
+        </section>
+
+        <!-- why -->
+        <section class="px-10 my-20">
+            <div class="flex items-center flex-col gap-2">
+                <p class="text-amber-900 text-[12px] font-semibold  ">THE CRAVE STANDARD</p>
+                <p class="font-bold text-4xl">Why Food Lovers Choose</p>
+                <p class="font-bold text-4xl">Crave & Co.</p>
+                <p class="text-[12px] text-gray-500 my-3">Mindfully prepared cuisine backed by uncompromised culinary
+                    speed.
+                </p>
+            </div>
+            <div class="grid grid-cols-4 my-8 gap-4">
+                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                    <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
+                            class="fa-solid fa-rocket"></i></p>
+                    <p class="font-bold text-xl">Fast Delivery</p>
+                    <p class="text-[15px] text-gray-500">Guaranteed delivery in 30 minutes or we credit your meal with
+                        our punctuality
+                        guarantee.</p>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                    <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
+                            class="fa-solid fa-leaf"></i></p>
+                    <p class="font-bold text-xl">Fresh Ingredients</p>
+                    <p class="text-[15px] text-gray-500">Direct farm-to-table partnerships ensuring 100% organic produce
+                        & non-GMO poultry.</p>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                    <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
+                            class="fa-regular fa-hand-pointer"></i></p>
+                    <p class="font-bold text-xl">Easy Ordering</p>
+                    <p class="text-[15px] text-gray-500">One-click repeat baskets, dietary filters, and live dispatch
+                        tracking built right into our app.</p>
+                </div>
+
+                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                    <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
+                            class="fa-solid fa-shield"></i></p>
+                    <p class="font-bold text-xl">Secure Checkout</p>
+                    <p class="text-[15px] text-gray-500">Encrypted payment gateways supporting all cards, Instant UPI,
+                        and zero-touch cash on delivery.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-[#003B20]">
+        <section class="px-10 mt-20 py-10">
+            <div class="grid grid-cols-4 gap-4">
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Crave & Co.</p>
+                    <p class="text-orange-200 text-sm font-semibold mb-1">Good Food. Great Mood.</p>
+                    <p class="text-gray-400 text-sm">Crafting farm-fresh artisan culinary moments daily. Sourced with
+                        integrity,
+                        prepared with mindful
+                        passion, and delivered warm to your table.</p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Explore</p>
+                    <ul class="text-gray-400 text-sm mb-1">
+                        <li>Menu</li>
+                        <li>Popular Dishes</li>
+                        <li>Why Us</li>
+                        <li>Dietary Guide</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Company</p>
+                    <ul class="text-gray-400 text-sm mb-1">
+                        <li>About</li>
+                        <l>Contact</li>
+                            <li>Admin Portal</li>
+                            <li>Partner Farmers</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Stay Nourished</p>
+                    <p class="text-gray-400 text-sm">Subscribe for seasonal specials, secret kitchen recipes, and member
+                        tastings.</p>
+                </div>
+
+
+            </div>
+        </section>
+    </footer>
+
+    <script src="./home.js"></script>
+</body>
+
+</html>

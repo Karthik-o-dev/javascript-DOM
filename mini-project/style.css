@@ -1,3 +1,7 @@
+/* * {
+    margin: 0;
+} */
+
 #login,
 #signUp {
     position: fixed;
@@ -16,7 +20,11 @@
     display: grid;
     grid-template-columns: 1fr;
     gap: 20px;
-    padding: 50px;
+    padding-inline: 100px;
+    padding-block: 40px;
+    background-color: beige;
+    margin-block: 30px;
+
 }
 
 .recipes_Container {
@@ -25,6 +33,13 @@
     padding: 10px;
     border-radius: 10px;
     box-shadow: 2px 2px 3px gray;
+    background-color: white;
+}
+
+.recipes_Container h2 {
+    font-weight: 500;
+    text-align: center;
+    margin: 5px;
 }
 
 .image-container {
