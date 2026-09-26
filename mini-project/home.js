@@ -2,7 +2,10 @@ const popular = document.getElementById("popular-dishes");
 
 getAllRecipes().then(recipes => {
     console.log(recipes);
-    recipes.forEach(recipe => {
+
+    const popularRecipes = recipes.slice(0, 4);
+
+    popularRecipes.forEach(recipe => {
 
         const main_img = recipe.image;
 

@@ -7,9 +7,7 @@
     <title>Document</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./home.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
-        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
-        crossorigin="anonymous" referrerpolicy="no-referrer">
+
 </head>
 
 <body class="bg-[#E8FFEF]">
@@ -24,11 +22,11 @@
 
         </div>
 
-        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-full">
+        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-[100px]">
             <ul class="flex items-center gap-8 font-semibold text-gray-500">
                 <li><a href="./home.html">Home</a></li>
                 <li><a href="./menu.html">Menu</a></li>
-                <li><a href="./about.html">About</a></li>
+                <li><a href="#about">About</a></li>
                 <li><a href="">Orders</a></li>
             </ul>
         </nav>
@@ -40,48 +38,34 @@
     </header>
 
     <main>
-        <section id="menu" class="mt-10 px-10">
-            <div class="flex justify-between">
-                <div>
-                    <p class="text-amber-900 font-semibold text-[12px]">THE FULL CATALOG</p>
-                    <p class="font-bold text-4xl ">Explore Our Fresh Kitchen</p>
-                    <p class="text-gray-500">Handcrafted culinary creations ready for immediate delivery.</p>
+        <section id="about" class="flex px-10 my-10">
+            <div class="w-full">
+                <p class="text-amber-900 font-semibold text-[12px]">OUR STOR & PHILOSOPHY</p>
+                <p class="font-bold text-4xl ">Crafting Artisanal Moments,<br> One Dish at a Time.</p>
+                <p class="text-[16px] text-gray-600 mt-5">Crave & Co. was born from a simple belief: fast convenience
+                    shouldn’t mean compromised food. We
+                    bridge the gap between fine artisan neighborhood dining and instantaneous delivery.</p>
+
+                <div class="flex gap-4 my-5">
+                    <div class="bg-white rounded-lg p-5">
+                        <p class="font-extrabold text-amber-900">100%</p>
+                        <p>Organic heirloom flours & local produce</p>
+                    </div>
+                    <div class="bg-white rounded-lg p-5">
+                        <p class="font-extrabold ">0%</p>
+                        <p>Synthetic preservatives or artificial flavorings</p>
+                    </div>
                 </div>
-                <div class="bg-white rounded-full flex items-center w-[280px] h-[40px] px-4 gap-2">
-                    <i class="fa-solid fa-magnifying-glass text-sm text-gray-700"></i>
-                    <input type="text" placeholder="Search for dishes, cuisines, ingredients."
-                        class="w-full outline-none text-xs text-gray-700 placeholder:text-gray-400">
-                </div>
+                <button class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold"><a
+                        href="./menu.html">Taste the Craft</a></button>
+
             </div>
-
-            <div class="flex gap-3 my-4">
-                <button data-category="all"
-                    class="category-btn bg-black text-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">All
-                    Dishes</button>
-                <button data-category="Breakfast"
-                    class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Breakfast</button>
-                <button data-category="Lunch"
-                    class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Lunch
-                    &
-                    Bowls</button>
-                <button data-category="Dinner"
-                    class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Dinner
-                    Specialties</button>
-                <button data-category="Snack"
-                    class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Sides
-                    &
-                    Snacks</button>
-            </div>
-
-            <div id="menu-container" class="grid grid-cols-4 gap-4"></div>
-
-            <div id="pagination" class="flex justify-center items-center gap-2 mt-8 mb-10"></div>
+            <div class="w-full"><img src="./assets/about/image.png" alt="about" class="rounded-xl"></div>
         </section>
     </main>
 
-
     <footer class="bg-[#003B20]">
-        <section class="px-10 mt-20 py-10">
+        <section class="px-10 mt-22 py-10">
             <div class="grid grid-cols-4 gap-4">
                 <div>
                     <p class="font-bold text-xl text-white mb-2">Crave & Co.</p>
@@ -123,8 +107,6 @@
         </section>
     </footer>
 
-    <script src="./api.js"></script>
-    <script src="./menu.js"></script>
 </body>
 
 </html>

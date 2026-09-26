@@ -14,7 +14,7 @@ const request = async (url) => {
 }
 
 const getAllRecipes = async () => {
-    const api = get_api("/recipes?skip=&limit=4")
+    const api = get_api("/recipes?skip=&limit=0")
     const response = await request(api)
     return response.recipes;
 }
