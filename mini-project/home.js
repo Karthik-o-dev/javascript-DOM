@@ -1,5 +1,3 @@
-
-
 const popular = document.getElementById("popular-dishes");
 
 getAllRecipes().then(recipes => {

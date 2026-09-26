@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
+        integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+</head>
+
+<body class="bg-[#E8FFEF]">
+    <header class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2">
+        <div class="flex items-center">
+            <img src="./assets/title.png" alt="title" class="h-8">
+
+            <div>
+                <h1 class="font-semibold text-lg">Crave & Co.</h1>
+                <h2 class="text-[10px]">Good Food. Great Mood.</h2>
+            </div>
+
+        </div>
+
+        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-[100px]">
+            <ul class="flex items-center gap-8 font-semibold text-gray-500">
+                <li><a href="">Home</a></li>
+                <li><a href="">Menu</a></li>
+                <li><a href="">About</a></li>
+                <li><a href="">Orders</a></li>
+            </ul>
+        </nav>
+
+        <div class="flex gap-3">
+            <button class="p-2 px-5 rounded-[100px] font-semibold">Login</button>
+            <button class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold">Sign Up</button>
+        </div>
+    </header>
+
+    <main>
+        <section class="mt-10 px-10">
+            <div class="flex justify-between">
+                <div>
+                    <p class="text-amber-900 font-semibold">THE FULL CATALOG</p>
+                    <p class="font-bold text-4xl ">Explore Our Fresh Kitchen</p>
+                    <p class="text-gray-500">Handcrafted culinary creations ready for immediate delivery.</p>
+                </div>
+                <div class="bg-white rounded-full flex items-center w-[280px] h-[40px] px-4 gap-2">
+                    <i class="fa-solid fa-magnifying-glass text-sm text-gray-700"></i>
+                    <input type="text" placeholder="Search for dishes, cuisines, ingredients."
+                        class="w-full outline-none text-xs text-gray-700 placeholder:text-gray-400">
+                </div>
+            </div>
+
+            <div class="flex gap-3 mt-4">
+                <button
+                    class="bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer hover:bg-black hover:text-white">All
+                    Dishes</button>
+                <button
+                    class="bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer hover:bg-black hover:text-white">Breakfast</button>
+                <button
+                    class="bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer hover:bg-black hover:text-white">Lunch
+                    &
+                    Bowls</button>
+                <button
+                    class="bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer hover:bg-black hover:text-white">Dinner
+                    Specialties</button>
+                <button
+                    class="bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer hover:bg-black hover:text-white">Fast
+                    Food</button>
+                <button
+                    class="bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer hover:bg-black hover:text-white">Desserts</button>
+                <button
+                    class="bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer hover:bg-black hover:text-white">Sides
+                    &
+                    Snacks</button>
+            </div>
+
+            <div id="menu-container" class="grid grid-cols-4 gap-4"></div>
+        </section>
+    </main>
+
+
+    <footer class="bg-[#003B20]">
+        <section class="px-10 mt-20 py-10">
+            <div class="grid grid-cols-4 gap-4">
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Crave & Co.</p>
+                    <p class="text-orange-200 text-sm font-semibold mb-1">Good Food. Great Mood.</p>
+                    <p class="text-gray-400 text-sm">Crafting farm-fresh artisan culinary moments daily. Sourced with
+                        integrity,
+                        prepared with mindful
+                        passion, and delivered warm to your table.</p>
+                </div>
+
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Explore</p>
+                    <ul class="text-gray-400 text-sm mb-1">
+                        <li>Menu</li>
+                        <li>Popular Dishes</li>
+                        <li>Why Us</li>
+                        <li>Dietary Guide</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Company</p>
+                    <ul class="text-gray-400 text-sm mb-1">
+                        <li>About</li>
+                        <l>Contact</li>
+                            <li>Admin Portal</li>
+                            <li>Partner Farmers</li>
+                    </ul>
+                </div>
+
+                <div>
+                    <p class="font-bold text-xl text-white mb-2">Stay Nourished</p>
+                    <p class="text-gray-400 text-sm">Subscribe for seasonal specials, secret kitchen recipes, and member
+                        tastings.</p>
+                </div>
+
+
+            </div>
+        </section>
+    </footer>
+
+    <script src="./api.js"></script>
+    <script src="./menu.js"></script>
+</body>
+
+</html>
