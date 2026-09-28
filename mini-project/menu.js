@@ -9,6 +9,30 @@ let currentRecipes = [];
 let currentPage = 1;
 let recipesPerPage = 8;
 
+const getRecipePrice = (recipe) => {
+    return Number((5.99 * (recipe.id % 10)).toFixed(2));
+}
+
+const addToCart = (recipe) => {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const existingItem = cart.find(item => item.id === recipe.id);
+
+    if (existingItem) {
+        existingItem.quantity++;
+    } else {
+        cart.push({
+            id: recipe.id,
+            name: recipe.name,
+            image: recipe.image,
+            price: getRecipePrice(recipe),
+            quantity: 1
+        });
+    }
+    localStorage.setItem("cart", JSON.stringify(cart));
+    alert(recipe.name + "added to your cart")
+    console.log(cart)
+};
+
 const displayRecipes = (recipes) => {
     menuContainer.innerHTML = "";
 
@@ -33,14 +57,27 @@ const displayRecipes = (recipes) => {
         const p2 = document.createElement("p");
         p2.innerHTML = recipe.cuisine;
 
+        const price_add = document.createElement("div")
+        price_add.className = "flex justify-between item-center"
+
+        const recipePrice = document.createElement("p")
+        recipePrice.innerHTML = "$" + getRecipePrice(recipe);
+
         const button = document.createElement("button");
         button.innerHTML = "Add";
+        button.className = "bg-[#FF6B21] text-white px-4 py-2 rounded-full cursor-pointer";
+        button.addEventListener("click", () => {
+            addToCart(recipe)
+        })
+
+        price_add.appendChild(recipePrice);
+        price_add.appendChild(button)
 
         card.appendChild(img)
         card.appendChild(h3)
         card.appendChild(p1)
         card.appendChild(p2)
-        card.appendChild(button)
+        card.appendChild(price_add)
 
         menuContainer.appendChild(card);
 

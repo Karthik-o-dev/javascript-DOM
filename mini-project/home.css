@@ -5,6 +5,7 @@ body::-webkit-scrollbar {
 .dishes {
     background-color: white;
     border-radius: 20px;
+    padding: 10px;
 }
 
 .dishes img {
