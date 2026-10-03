@@ -10,7 +10,7 @@ let currentPage = 1;
 let recipesPerPage = 8;
 
 const getRecipePrice = (recipe) => {
-    return Number((5.99 * (recipe.id % 10)).toFixed(2));
+    return Number((5.99 + (recipe.id % 10)).toFixed(2));
 }
 
 const addToCart = (recipe) => {
@@ -29,7 +29,6 @@ const addToCart = (recipe) => {
         });
     }
     localStorage.setItem("cart", JSON.stringify(cart));
-    alert(recipe.name + "added to your cart")
     console.log(cart)
 };
 

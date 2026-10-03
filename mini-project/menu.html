@@ -33,7 +33,11 @@
             </ul>
         </nav>
 
-        <div class="flex gap-3">
+        <div class="flex items-center gap-3">
+            <button id="cart-button" class="relative p-2 px-4 rounded-full bg-[#E8FFEF] text-[#003B20] cursor-pointer">
+                <i class="fa-solid fa-bag-shopping"></i>
+                <span id="cart-count" class="ml-1 text-sm font-bold">0</span>
+            </button>
             <button class="p-2 px-5 rounded-[100px] font-semibold">Login</button>
             <button class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold">Sign Up</button>
         </div>
@@ -123,8 +127,24 @@
         </section>
     </footer>
 
+    <div id="cart-overlay" class="cart-overlay"></div>
+
+    <aside class="cart-drawer" id="cart-drawer">
+        <div class="drawer-header">
+            <h2>
+                <i class="fa-solid fa-bag-shopping"></i>Your Feast Basket
+            </h2>
+            <button id="close-cart">&times;</button>
+        </div>
+
+        <div class="drawer-cart-items" id="drawer-cart-items">
+            <p class="text-gray-500">Your basket is empty.</p>
+        </div>
+    </aside>
+
     <script src="./api.js"></script>
     <script src="./menu.js"></script>
+    <script src="./cart-drawer.js"></script>
 </body>
 
 </html>
