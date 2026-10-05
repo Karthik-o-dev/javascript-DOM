@@ -29,6 +29,7 @@ const addToCart = (recipe) => {
         });
     }
     localStorage.setItem("cart", JSON.stringify(cart));
+    document.dispatchEvent(new Event("cartUpdated"));
     console.log(cart)
 };
 
