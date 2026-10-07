@@ -23,8 +23,28 @@ cartOverlay.addEventListener("click", hideCart);
 const drawerCartItems = document.getElementById("drawer-cart-items");
 const cartCount = document.getElementById("cart-count");
 
+const cartSubtotal = document.getElementById("cart-subtotal");
+const cartDelivery = document.getElementById("cart-delivery");
+const cartTotal = document.getElementById("cart-total");
+
 const getCart = () => {
     return JSON.parse(localStorage.getItem("cart")) || [];
+};
+
+const updateCartSummary = () => {
+    const cart = getCart();
+
+    const subtotal = cart.reduce((total, item) => {
+        return total + (item.price * item.quantity);
+    }, 0);
+
+    const delivery = cart.length > 0 ? 2 : 0;
+
+    const total = subtotal + delivery;
+
+    cartSubtotal.textContent = "$" + subtotal.toFixed(2);
+    cartDelivery.textContent = "$" + delivery.toFixed(2);
+    cartTotal.textContent = "$" + total.toFixed(2);
 };
 
 const displayCart = () => {
@@ -40,7 +60,7 @@ const displayCart = () => {
 
     cart.forEach(item => {
         const cartItem = document.createElement("div");
-        cartItem.className = "flex gap-3 items-center mb-5  border p-2 rounded-xl";
+        cartItem.className = "flex gap-3 items-center mb-5  inset-shadow-sm shadow-sm p-2 rounded-xl hover:scale-102 duration-200 ease-in";
 
         const img = document.createElement("img");
 
@@ -105,7 +125,7 @@ const displayCart = () => {
         removeButton.innerHTML = `<i class="fa-solid fa-trash-can"></i>`;
 
         removeButton.className =
-            "remove-btn text-red-500 text-xs mt-2";
+            "remove-btn text-red-500 text-xs mt-2 cursor-pointer";
 
         removeButton.dataset.id = item.id;
 
@@ -132,7 +152,10 @@ const displayCart = () => {
 
 };
 
-cartButton.addEventListener("click", displayCart);
+cartButton.addEventListener("click", () => {
+    displayCart();
+    updateCartSummary();
+});
 
 drawerCartItems.addEventListener("click", (event) => {
     const cart = getCart();
@@ -161,6 +184,7 @@ drawerCartItems.addEventListener("click", (event) => {
                 localStorage.setItem("cart", JSON.stringify(filteredCart));
                 displayCart();
                 updatedCart();
+                updateCartSummary();
 
                 return;
             }
@@ -173,6 +197,7 @@ drawerCartItems.addEventListener("click", (event) => {
 
         displayCart();
         updatedCart();
+        updateCartSummary();
 
         return;
     }
@@ -187,6 +212,7 @@ drawerCartItems.addEventListener("click", (event) => {
 
         displayCart();
         updatedCart();
+        updateCartSummary();
     }
 
 });
@@ -203,3 +229,15 @@ const updatedCart = () => {
 
 document.addEventListener("cartUpdated", updatedCart);
 updatedCart();
+
+const checkoutButton = document.getElementById("checkout-button");
+
+checkoutButton.addEventListener("click", () => {
+    const cart = getCart();
+
+    if (cart.length === 0) {
+        alert("Your cart is empty.");
+        return;
+    }
+    window.location.href = "./checkout.html";
+})

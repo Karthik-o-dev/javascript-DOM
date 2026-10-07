@@ -140,6 +140,29 @@
         <div class="drawer-cart-items" id="drawer-cart-items">
             <p class="text-gray-500">Your basket is empty.</p>
         </div>
+
+        <div id="cart-summary" class="border-t px-10 py-5 bg-white">
+
+            <div class="flex justify-between mb-2">
+                <span class="text-gray-500">Subtotal</span>
+                <span id="cart-subtotal" class="font-semibold">$0.00</span>
+            </div>
+
+            <div class="flex justify-between mb-2">
+                <span class="text-gray-500">Delivery</span>
+                <span id="cart-delivery" class="font-semibold">$2.00</span>
+            </div>
+
+            <div class="border-t pt-3 mt-3 flex justify-between">
+                <span class="font-bold">Total</span>
+                <span id="cart-total" class="font-bold text-lg">$0.00</span>
+            </div>
+
+            <button id="checkout-button"
+                class="w-full mt-4 bg-[#FF6B21] text-white py-3 rounded-full font-semibold cursor-pointer hover:scale-105 duration-200 ease-in">
+                Proceed to Checkout
+            </button>
+        </div>
     </aside>
 
     <script src="./api.js"></script>

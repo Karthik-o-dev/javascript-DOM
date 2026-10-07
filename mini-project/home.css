@@ -107,3 +107,13 @@ body.cart-open {
         max-width: 100%;
     }
 }
+
+.quantity-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: #E8FFEF;
+    color: #003B20;
+    font-weight: bold;
+    cursor: pointer;
+}

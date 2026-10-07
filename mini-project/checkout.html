@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css">
+</head>
+
+<body class="bg-[#E8FFEF]">
+    <header class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2">
+        <div class="flex items-center">
+            <img src="./assets/title.png" alt="title" class="h-8">
+            <div>
+                <h1 class="font-semibold text-lg">
+                    Crave & Co.
+                </h1>
+
+                <h2 class="text-[10px]">
+                    Good Food. Great Mood.
+                </h2>
+            </div>
+        </div>
+        <a href="./menu.html" class="text-[#003B20] font-semibold">← Back to Menu</a>
+
+    </header>
+
+    <main class="px-10 py-10">
+        <h1 class="text-4xl font-bold text-[#003B20]">
+            Checkout</h1>
+
+        <p class="text-gray-500 mt-2">
+            Complete your order and enjoy your meal.</p>
+
+        <div class="grid grid-cols-2 gap-8 mt-8">
+            <section class="bg-white rounded-2xl p-6">
+
+                <h2 class="text-xl font-bold mb-5">Delivery Information</h2>
+
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold mb-2">
+                        Full Name</label>
+
+                    <input id="customer-name" type="text" placeholder="Enter your name"
+                        class="w-full border rounded-xl px-4 py-3 outline-none">
+
+                </div>
+
+
+                <div class="mb-4">
+                    <label class="block text-sm font-semibold mb-2">
+                        Phone Number</label>
+
+                    <input id="customer-phone" type="tel" placeholder="Enter your phone number"
+                        class="w-full border rounded-xl px-4 py-3 outline-none">
+
+                </div>
+
+
+                <div class="mb-4">
+
+                    <label class="block text-sm font-semibold mb-2">
+                        Delivery Address</label>
+
+                    <textarea id="customer-address" rows="4" placeholder="Enter your delivery address"
+                        class="w-full border rounded-xl px-4 py-3 outline-none"></textarea>
+
+                </div>
+
+
+                <h2 class="text-xl font-bold mt-6 mb-4">
+                    Payment Method</h2>
+
+
+                <label class="flex items-center gap-3 border rounded-xl p-4 cursor-pointer">
+                    <input type="radio" name="payment" value="cod" checked>
+                    <span>
+                        Cash on Delivery
+                    </span>
+
+                </label>
+
+            </section>
+
+            <section class="bg-white rounded-2xl p-6">
+
+                <h2 class="text-xl font-bold mb-5">
+                    Your Order
+                </h2>
+
+                <div id="checkout-items"></div>
+
+
+                <div>
+                    <div class="border-t mt-5 pt-5">
+
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-500">
+                                Subtotal</span>
+
+                            <span id="checkout-subtotal" class="font-semibold">
+                                $0.00</span>
+                        </div>
+
+
+                        <div class="flex justify-between mb-2">
+                            <span class="text-gray-500">
+                                Delivery
+                            </span>
+
+                            <span id="checkout-delivery" class="font-semibold">
+                                $0.00
+                            </span>
+
+                        </div>
+
+
+                        <div class="border-t mt-3 pt-3 flex justify-between">
+                            <span class="font-bold text-lg">
+                                Total
+                            </span>
+
+                            <span id="checkout-total" class="font-bold text-xl text-[#003B20]">
+                                $0.00
+                            </span>
+                        </div>
+
+                    </div>
+
+
+                    <button id="place-order"
+                        class="w-full mt-6 bg-[#FF6B21] text-white py-3 rounded-full font-semibold cursor-pointer hover:scale-105 duration-200 ease-in">
+
+                        Place Order
+
+                    </button>
+                </div>
+
+            </section>
+
+        </div>
+    </main>
+
+    <script src="./checkout.js"></script>
+</body>
+
+</html>
