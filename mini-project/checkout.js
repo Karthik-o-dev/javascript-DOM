@@ -120,8 +120,6 @@ placeOrderButton.addEventListener("click", () => {
     localStorage.setItem("orders", JSON.stringify(orders));
     localStorage.removeItem("cart");
 
-    alert("Order placed successfully!");
-
     window.location.href = "./order.html";
 
     console.log(order)
