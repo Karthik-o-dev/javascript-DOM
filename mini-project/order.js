@@ -54,7 +54,7 @@ const displayOrder = () => {
 
         const itemCount = (order.items || []).reduce((sum, item) => sum + Number(item.quantity || 0), 0);
 
-        const itemNames = (order.tems || []).map(item => {
+        const itemNames = (order.items || []).map(item => {
             return item.name + (item.quantity > 1 ? ` (x${item.quantity})` : "");
         }).join(", ");
 
