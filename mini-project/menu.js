@@ -1,5 +1,6 @@
 const menuContainer = document.getElementById("menu-container");
 const pagination = document.getElementById("pagination");
+const searchInput = document.getElementById("recipe-search");
 
 const categoryButtons = document.querySelectorAll(".category-btn")
 
@@ -35,6 +36,11 @@ const addToCart = (recipe) => {
 
 const displayRecipes = (recipes) => {
     menuContainer.innerHTML = "";
+    if (recipes.length === 0) {
+        menuContainer.textContent = "No recipes found.";
+        pagination.innerHTML = "";
+        return;
+    }
 
     const start = (currentPage - 1) * recipesPerPage;
     const end = start + recipesPerPage;
@@ -197,3 +203,23 @@ const getCategory = (recipe) => {
     return "Other";
 };
 
+searchInput.addEventListener("input", () => {
+    const searchText = searchInput.value.toLowerCase().trim();
+
+    currentRecipes = allRecipes.filter(recipe => {
+        const matchesSearch = recipe.name.toLowerCase().includes(searchText) ||
+            recipe.cuisine.toLowerCase().includes(searchText) ||
+            recipe.ingredients.some(ingredient => {
+                ingredient.toLowerCase().includes(searchText)
+            });
+
+        const selectedCategory = document.querySelector(".category-btn.bg-black");
+        const category = selectedCategory?.dataset.category || "all";
+
+        const matchesCategory = category === "all" || getCategory(recipe) === category;
+
+        return matchesSearch && matchesCategory;
+    });
+    currentPage = 1;
+    displayRecipes(currentRecipes);
+});

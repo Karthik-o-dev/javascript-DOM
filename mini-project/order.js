@@ -52,9 +52,12 @@ const displayOrder = () => {
         const itemSummary = document.createElement("p");
         itemSummary.className = "text-xs text-gray-500 mt-1";
 
-        const itemCount = (order.items || []).reduce((sum, item) => sum + Number(item.quantity || 0), 0);
+        console.log("Full order:", order);
+        console.log("Saved items:", order.items);
 
-        const itemNames = (order.items || []).map(item => {
+        const itemCount = (order.item || []).reduce((sum, item) => sum + Number(item.quantity || 0), 0);
+
+        const itemNames = (order.item || []).map(item => {
             return item.name + (item.quantity > 1 ? ` (x${item.quantity})` : "");
         }).join(", ");
 
