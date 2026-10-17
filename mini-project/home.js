@@ -1,7 +1,7 @@
 const popular = document.getElementById("popular-dishes");
 
 getAllRecipes().then(recipes => {
-    console.log(recipes);
+    // console.log(recipes);
 
     const popularRecipes = recipes.slice(0, 4);
 
