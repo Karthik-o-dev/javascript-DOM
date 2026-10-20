@@ -1,7 +1,14 @@
 const ordersContainer = document.getElementById("orders-container");
 
 const getOrders = () => {
-    return JSON.parse(localStorage.getItem("orders")) || [];
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
+    if (!currentUser) {
+        return [];
+    }
+    return orders.filter(order => order.userEmail === currentUser.email);
 }
 
 const displayOrder = () => {

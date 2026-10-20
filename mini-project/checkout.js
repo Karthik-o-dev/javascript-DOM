@@ -99,8 +99,11 @@ placeOrderButton.addEventListener("click", () => {
     const delivery = cart.length > 0 ? 2 : 0;
     const total = subtotal + delivery;
 
+    const currentUser = JSON.parse(localStorage.getItem("currentUser"));
+
     const order = {
         orderId: Date.now(),
+        userEmail: currentUser?.email,
         customer: {
             name: name,
             phone: phone,

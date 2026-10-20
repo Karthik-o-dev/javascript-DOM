@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crave & Co.</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
@@ -15,9 +15,10 @@
 </head>
 
 <body class="bg-[#E8FFEF]">
-    <header class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2">
+    <header
+        class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2 z-[1500]">
         <div class="flex items-center">
-            <img src="./assets/title.png" alt="title" class="h-8">
+            <a href="./home.html"><img src="./assets/title.png" alt="title" class="h-8"></a>
 
             <div>
                 <h1 class="font-semibold text-lg">Crave & Co.</h1>
@@ -26,7 +27,7 @@
 
         </div>
 
-        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-[100px]">
+        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-[100px] mr-[80px]">
             <ul class="flex items-center gap-8 font-semibold text-gray-500">
                 <li><a href="./home.html">Home</a></li>
                 <li><a href="./menu.html">Menu</a></li>
@@ -90,15 +91,19 @@
                     every authentic craving. Freshly prepared, responsibly sourced, and brought hot to your table.</p>
 
                 <div class="my-5 flex gap-6">
-                    <button class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold"><a
+                    <button
+                        class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95"><a
                             href="./menu.html">Explore Menu<i class="fa-solid fa-utensils ml-2"></i></a></button>
-                    <button class="bg-white p-2 px-5 rounded-[100px] text-black font-semibold"><i
-                            class="fa-regular fa-truck mr-2"></i>Order Now</i></button>
+                    <button
+                        class="bg-white p-2 px-5 rounded-[100px] text-black font-semibold cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95"><i
+                            class="fa-regular fa-truck mr-2"></i></i><a href="./order.html">Order Now</a></button>
                 </div>
             </div>
 
-            <div class="flex justify-center items-center w-full mt-10 ">
-                <img src="./assets/hero-section.png" alt="hero" class="rounded-[50px] border-15 border-gray-200">
+            <div
+                class="flex justify-center items-center w-full mt-10 transition-transform duration-300 ease-in-out hover:scale-103">
+                <a href="./menu.html"><img src="./assets/hero-section.png" alt="hero"
+                        class="rounded-[50px] border-15 border-gray-200"></a>
             </div>
 
         </section>
@@ -116,8 +121,8 @@
                                 class="fa-solid fa-arrow-right-long ml-2"></i></a></button>
                 </div>
             </div>
-            <div class="grid grid-cols-4 my-8 gap-4">
-                <div class="bg-white p-3 rounded-2xl">
+            <div class="grid grid-cols-4 my-8 gap-4 ">
+                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
                     <div><img src="./assets/menu/menu2.png" alt="menu1" class="rounded-xl"></div>
                     <div class="flex justify-between items-center my-2">
                         <p class="font-semibold">Main Course</p>
@@ -127,7 +132,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl">
+                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
                     <div><img src="./assets/menu/menu3.png" alt="menu1" class="rounded-xl"></div>
                     <div class="flex justify-between items-center my-2">
                         <p class="font-semibold">Fast Food & Buns</p>
@@ -137,7 +142,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl">
+                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
                     <div><img src="./assets/menu/menu4.png" alt="menu1" class="rounded-xl"></div>
                     <div class="flex justify-between items-center my-2">
                         <p class="font-semibold">Artisan Desserts</p>
@@ -147,7 +152,7 @@
                     </div>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl">
+                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
                     <div><img src="./assets/menu/menu1.png" alt="menu1" class="rounded-xl"></div>
                     <div class="flex justify-between items-center my-2">
                         <p class="font-semibold">Breakfast & Brunch</p>
@@ -168,7 +173,7 @@
                     <p class="text-gray-500">Customer-voted creations with the highest reorder frequency.</p>
                 </div>
                 <div class="flex items-end">
-                    <button class="text-gray-700 font-semibold">Browse Full Catalog<i
+                    <button class="text-gray-700 font-semibold"><a href="./menu.html">Browse Full Catalog</a><i
                             class="fa-solid fa-arrow-right-long ml-2"></i></button>
                 </div>
             </div>
@@ -187,7 +192,8 @@
                 </p>
             </div>
             <div class="grid grid-cols-4 my-8 gap-4">
-                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                <div
+                    class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8 transition-transform duration-300 ease-in-out hover:scale-95">
                     <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
                             class="fa-solid fa-rocket"></i></p>
                     <p class="font-bold text-xl">Fast Delivery</p>
@@ -196,7 +202,8 @@
                         guarantee.</p>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                <div
+                    class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8 transition-transform duration-300 ease-in-out hover:scale-95">
                     <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
                             class="fa-solid fa-leaf"></i></p>
                     <p class="font-bold text-xl">Fresh Ingredients</p>
@@ -204,7 +211,8 @@
                         & non-GMO poultry.</p>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                <div
+                    class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8 transition-transform duration-300 ease-in-out hover:scale-95">
                     <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
                             class="fa-regular fa-hand-pointer"></i></p>
                     <p class="font-bold text-xl">Easy Ordering</p>
@@ -212,7 +220,8 @@
                         tracking built right into our app.</p>
                 </div>
 
-                <div class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8">
+                <div
+                    class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8 transition-transform duration-300 ease-in-out hover:scale-95">
                     <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i
                             class="fa-solid fa-shield"></i></p>
                     <p class="font-bold text-xl">Secure Checkout</p>
@@ -238,7 +247,7 @@
                 <div>
                     <p class="font-bold text-xl text-white mb-2">Explore</p>
                     <ul class="text-gray-400 text-sm mb-1">
-                        <li>Menu</li>
+                        <li><a href="./menu.html">Menu</a></li>
                         <li>Popular Dishes</li>
                         <li>Why Us</li>
                         <li>Dietary Guide</li>
@@ -248,7 +257,7 @@
                 <div>
                     <p class="font-bold text-xl text-white mb-2">Company</p>
                     <ul class="text-gray-400 text-sm mb-1">
-                        <li>About</li>
+                        <li><a href="./about.html">About</a></li>
                         <l>Contact</li>
                             <li>Admin Portal</li>
                             <li>Partner Farmers</li>

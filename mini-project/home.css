@@ -6,6 +6,15 @@ body::-webkit-scrollbar {
     background-color: white;
     border-radius: 20px;
     padding: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding-bottom: 20px;
+    transition: transform 0.3s ease;
+}
+
+.dishes:hover {
+    transform: scale(0.95);
 }
 
 .dishes img {
@@ -29,6 +38,7 @@ body::-webkit-scrollbar {
     border-radius: 100px;
     background-color: white;
     color: black;
+    cursor: pointer;
 }
 
 .pageButton {
@@ -38,6 +48,7 @@ body::-webkit-scrollbar {
     justify-content: center;
     align-items: center;
     border-radius: 100px;
+    cursor: pointer;
 }
 
 .cart-overlay {
