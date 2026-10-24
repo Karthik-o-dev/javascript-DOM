@@ -94,10 +94,13 @@ const loginMessage = document.getElementById("login-message");
 const switchToLogin = document.getElementById("switch-to-login");
 const switchToSignup = document.getElementById("switch-to-signup");
 
-loginBtn.addEventListener("click", () => {
+const openLogin = () => {
+    hideSignup();
     loginBox.classList.remove("hidden");
     loginBox.classList.add("flex")
-});
+};
+
+loginBtn.addEventListener("click", openLogin);
 
 const hideLogin = () => {
     loginBox.classList.add("hidden");
@@ -114,8 +117,7 @@ loginBox.addEventListener("click", (event) => {
 
 switchToLogin.addEventListener("click", () => {
     hideSignup();
-    loginBox.classList.remove("hidden");
-    loginBox.classList.add("flex")
+    openLogin();
 });
 
 switchToSignup.addEventListener("click", () => {
@@ -210,3 +212,16 @@ logoutButton.addEventListener("click", () => {
 
 updateAuthUI();
 
+const params = new URLSearchParams(window.location.search);
+
+if (
+    params.get("login") === "1" &&
+    !localStorage.getItem("currentUser")
+) {
+    openLogin();
+    window.history.replaceState(
+        {},
+        document.title,
+        window.location.pathname
+    );
+}

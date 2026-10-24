@@ -8,7 +8,7 @@ const getOrders = () => {
     if (!currentUser) {
         return [];
     }
-    return orders.filter(order => order.userEmail === currentUser.email);
+    return orders.filter(order => order.userEmail === currentUser.email).reverse();
 }
 
 const displayOrder = () => {
@@ -50,17 +50,10 @@ const displayOrder = () => {
 
         orderId.textContent = "#CRV-" + String(order.orderId).slice(-5);
 
-        const status = document.createElement("span");
-        status.textContent = order.status || "Placed";
-        status.className = "inline-block ml-2 text-xs font-semibold bg-[#D8F7E3] text-[#003B20] px-2 py-1 rounded-full";
-
-        orderId.appendChild(status);
-
         const itemSummary = document.createElement("p");
         itemSummary.className = "text-xs text-gray-500 mt-1";
 
-        console.log("Full order:", order);
-        console.log("Saved items:", order.items);
+        console.log("Full order:", order.customer);
 
         const itemCount = (order.item || []).reduce((sum, item) => sum + Number(item.quantity || 0), 0);
 
@@ -72,11 +65,21 @@ const displayOrder = () => {
 
         const orderDate = document.createElement("p");
         orderDate.className = "text-xs text-gray-500 mt-1";
-        orderDate.textContent = order.date;
+        orderDate.textContent = new Date(order.date).toLocaleDateString("en-GB");
+
+        const customerName = document.createElement("h3");
+        customerName.textContent = "Customer Name : " + order.customer.name;
+        customerName.className = "text-xs text-gray-500 mt-1";
+
+        const orderAddress = document.createElement("p");
+        orderAddress.className = " text-xs text-gray-500 mt-1";
+        orderAddress.textContent = "Address : " + order.customer.address;
 
         orderInfo.appendChild(orderId);
         orderInfo.appendChild(itemSummary);
         orderInfo.appendChild(orderDate);
+        orderInfo.appendChild(customerName);
+        orderInfo.appendChild(orderAddress)
 
         const total = document.createElement("p");
         total.className = "font-bold text-lg whitespace-nowrap";
