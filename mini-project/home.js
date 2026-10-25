@@ -10,7 +10,7 @@ getAllRecipes().then(recipes => {
         const main_img = recipe.image;
 
         const recipesContainer = document.createElement("div");
-        recipesContainer.className = ("dishes")
+        recipesContainer.className = ("dishes");
 
         const img = document.createElement("img");
         img.src = main_img
@@ -22,6 +22,10 @@ getAllRecipes().then(recipes => {
 
         recipesContainer.appendChild(img)
         recipesContainer.appendChild(title)
+
+        recipesContainer.addEventListener("click", () => {
+            window.location.href = `menu.html?recipeId=${recipe.id}`;
+        });
 
         popular.appendChild(recipesContainer)
 

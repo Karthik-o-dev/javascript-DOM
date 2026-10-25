@@ -13,8 +13,7 @@
 </head>
 
 <body class="bg-[#E8FFEF]">
-    <header
-        class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2 z-[1500]">
+    <header class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2 ">
         <div class="flex items-center">
             <a href="./home.html"><img src="./assets/title.png" alt="title" class="h-8"></a>
 
@@ -92,16 +91,16 @@
                 <button data-category="all"
                     class="category-btn bg-black text-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">All
                     Dishes</button>
-                <button data-category="Breakfast"
+                <button data-category="breakfast"
                     class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Breakfast</button>
-                <button data-category="Lunch"
+                <button data-category="lunch"
                     class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Lunch
                     &
                     Bowls</button>
-                <button data-category="Dinner"
+                <button data-category="dinner"
                     class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Dinner
                     Specialties</button>
-                <button data-category="Snack"
+                <button data-category="snack"
                     class="category-btn bg-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">Sides
                     &
                     Snacks</button>
@@ -199,6 +198,78 @@
     </div>
 
     </div>
+    </div>
+
+
+    <div id="recipe-modal"
+        class="hidden fixed inset-0 z-[2000] bg-black/10 backdrop-blur-md  items-center justify-center p-4">
+        <div id="recipe-modal-content"
+            class="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl p-5 scrollbar-none overflow-auto ">
+            <button id="close-recipe-modal"
+                class="absolute top-2 right-4 w-10 h-10 rounded-full bg-white text-lg text-black hover:bg-gray-100 cursor-pointer">&times;</button>
+
+            <div class="flex gap-4">
+                <div class="">
+                    <img id="modal-recipe-image" src="" alt="" class="object-cover rounded-md w-50 h-50">
+                </div>
+                <div class="">
+                    <p id="modal-recipe-cuisine" class="text-sm text-[#FF6B21] font-semibold mb-2">
+                    </p>
+
+                    <h2 id="modal-recipe-name" class="text-2xl md:text-3xl font-bold text-[#003B20] mb-3">
+                    </h2>
+
+                    <div class="flex flex-wrap gap-4 text-sm text-gray-600 mb-5">
+                        <span id="modal-recipe-rating"></span>
+                        <span id="modal-recipe-time"></span>
+                        <span id="modal-recipe-servings"></span>
+                    </div>
+
+                    <p id="modal-recipe-price" class="text-xl font-bold text-[#003B20] mb-6">
+                    </p>
+                </div>
+            </div>
+
+            <div class="flex justify-between gap-4">
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-[#003B20] mb-3">
+                        Ingredients
+                    </h3>
+                    <ul id="modal-recipe-ingredients" class="list-disc pl-5 space-y-2 text-sm text-gray-600">
+                    </ul>
+                </div>
+
+                <div class="mb-6">
+                    <h3 class="text-lg font-bold text-[#003B20] mb-3">
+                        Instructions
+                    </h3>
+                    <ol id="modal-recipe-instructions"
+                        class="list-decimal pl-5 space-y-2 text-sm text-gray-600 font-mono">
+                    </ol>
+                </div>
+            </div>
+
+            <div class="flex items-center gap-4 mb-5">
+                <span class="font-semibold text-gray-700">Quantity</span>
+
+                <div class="flex items-center gap-3 border rounded-full px-3 py-1">
+                    <button id="modal-quantity-minus" type="button" class="px-2 text-lg font-bold cursor-pointer">
+                        −
+                    </button>
+
+                    <span id="modal-quantity" class="font-semibold">1</span>
+
+                    <button id="modal-quantity-plus" type="button" class="px-2 text-lg font-bold cursor-pointer">
+                        +
+                    </button>
+                </div>
+            </div>
+
+            <button id="modal-add-to-cart" type="button"
+                class="w-full bg-[#FF6B21] hover:bg-[#e85d18] text-white font-semibold py-3 rounded-full cursor-pointer transition">
+                Add to Cart
+            </button>
+        </div>
     </div>
     <script>
         const currentUser = JSON.parse(

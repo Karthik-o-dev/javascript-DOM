@@ -91,6 +91,11 @@ placeOrderButton.addEventListener("click", () => {
         return;
     }
 
+    if (!validatePhone()) {
+        customerPhone.focus();
+        return;
+    }
+
     const cart = getCart();
 
     const subtotal = cart.reduce((total, item) => {
@@ -127,3 +132,21 @@ placeOrderButton.addEventListener("click", () => {
 
     console.log(order)
 })
+
+const phoneError = document.getElementById("phone-error");
+
+const validatePhone = () => {
+    const phone = customerPhone.value.trim();
+
+    const phonePattern = /^[6-9]\d{9}$/;
+
+    if (!phonePattern.test(phone)) {
+        phoneError.classList.remove("hidden");
+        customerPhone.classList.add("border-red-500");
+        return;
+    }
+    phoneError.classList.add("hidden");
+    customerPhone.classList.remove("border-red-500");
+
+    return true;
+}

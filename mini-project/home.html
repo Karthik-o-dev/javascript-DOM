@@ -16,19 +16,20 @@
 
 <body class="bg-[#E8FFEF]">
     <header
-        class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2 z-[1500]">
+        class="flex justify-between items-center bg-white my-2 mx-2 sm:mx-4 lg:mx-10 rounded-3xl lg:rounded-[100px] px-6 py-2 sticky top-2 z-[1500]">
         <div class="flex items-center">
             <a href="./home.html"><img src="./assets/title.png" alt="title" class="h-8"></a>
 
             <div>
-                <h1 class="font-semibold text-lg">Crave & Co.</h1>
-                <h2 class="text-[10px]">Good Food. Great Mood.</h2>
+                <h1 class="font-semibold text-lg hidden md:block">Crave & Co.</h1>
+                <h2 class="text-[10px] hidden md:block">Good Food. Great Mood.</h2>
             </div>
 
         </div>
 
-        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-[100px] mr-[80px]">
-            <ul class="flex items-center gap-8 font-semibold text-gray-500">
+        <nav class="bg-[#E8FFEF] p-2 px-3 sm:px-5 rounded-full mx-auto lg:mx-0 lg:mr-4">
+            <ul
+                class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 lg:gap-8 font-semibold text-gray-500 text-sm sm:text-base">
                 <li><a href="./home.html">Home</a></li>
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -36,11 +37,12 @@
             </ul>
         </nav>
 
-        <div class="flex items-center gap-3" id="auth-buttons">
+        <div class="flex items-center gap-2 sm:gap-3" id="auth-buttons">
             <button type="button" id="login-button"
                 class="p-2 px-5 rounded-[100px] font-semibold cursor-pointer">Login</button>
             <button type="button" id="signup-button"
-                class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold cursor-pointer">Sign Up</button>
+                class="bg-[#FF6B21] p-2 px-3 sm:px-5 rounded-[100px] text-white font-semibold cursor-pointer">Sign
+                Up</button>
         </div>
 
         <div id="profile-section" class="hidden relative">
@@ -79,11 +81,11 @@
 
     <main>
         <!-- hero-section -->
-        <section id="home" class="flex px-10 my-10">
+        <section id="home" class="flex flex-col lg:flex-row gap-6 lg:gap-10 px-4 sm:px-6 lg:px-10 my-6 sm:my-10">
             <div class="w-full">
                 <p class="bg-[#D8F7E3] inline-block p-1 px-3 rounded-full text-[12px] font-semibold">• GOOD FOOD • GREAT
                     MOOD</p>
-                <p class="font-extrabold text-6xl m-2">Discover Your Next</p>
+                <p class="font-extrabold text-3xl sm:text-4xl lg:text-6xl m-2">Discover Your Next</p>
                 <p class="font-extrabold text-6xl text-amber-900 m-3">Favorite Meal</p>
                 <p class="text-[16px] text-gray-600 mt-5">From comforting neighborhood classics to fresh chef-inspired
                     creations, explore a
@@ -96,7 +98,7 @@
                             href="./menu.html">Explore Menu<i class="fa-solid fa-utensils ml-2"></i></a></button>
                     <button
                         class="bg-white p-2 px-5 rounded-[100px] text-black font-semibold cursor-pointer transition-transform duration-300 ease-in-out hover:scale-95"><i
-                            class="fa-regular fa-truck mr-2"></i></i><a href="./order.html">Order Now</a></button>
+                            class="fa-regular fa-truck mr-2"></i></i><a href="./about.html">About Us</a></button>
                 </div>
             </div>
 
@@ -121,46 +123,50 @@
                                 class="fa-solid fa-arrow-right-long ml-2"></i></a></button>
                 </div>
             </div>
-            <div class="grid grid-cols-4 my-8 gap-4 ">
-                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
-                    <div><img src="./assets/menu/menu2.png" alt="menu1" class="rounded-xl"></div>
-                    <div class="flex justify-between items-center my-2">
-                        <p class="font-semibold">Main Course</p>
-                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
-                    <div><img src="./assets/menu/menu3.png" alt="menu1" class="rounded-xl"></div>
-                    <div class="flex justify-between items-center my-2">
-                        <p class="font-semibold">Fast Food & Buns</p>
-                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
-                    <div><img src="./assets/menu/menu4.png" alt="menu1" class="rounded-xl"></div>
-                    <div class="flex justify-between items-center my-2">
-                        <p class="font-semibold">Artisan Desserts</p>
-                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
-                            <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
-                    </div>
-                </div>
-
-                <div class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-8 gap-4 ">
+                <a href="./menu.html?category=breakfast"
+                    class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
                     <div><img src="./assets/menu/menu1.png" alt="menu1" class="rounded-xl"></div>
                     <div class="flex justify-between items-center my-2">
                         <p class="font-semibold">Breakfast & Brunch</p>
-                        <button class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                        <span class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
                             <i class="fa-solid fa-arrow-right-long"></i>
-                        </button>
+                        </span>
                     </div>
-                </div>
+                </a>
+
+                <a href="./menu.html?category=lunch"
+                    class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
+                    <div><img src="./assets/menu/menu2.png" alt="menu1" class="rounded-xl"></div>
+                    <div class="flex justify-between items-center my-2">
+                        <p class="font-semibold">Lunch</p>
+                        <span class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="./menu.html?category=dinner"
+                    class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
+                    <div><img src="./assets/menu/menu3.png" alt="menu1" class="rounded-xl"></div>
+                    <div class="flex justify-between items-center my-2">
+                        <p class="font-semibold">Fast Food & Buns</p>
+                        <span class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </div>
+                </a>
+
+                <a href="./menu.html?category=snack"
+                    class="bg-white p-3 rounded-2xl transition-transform duration-300 ease-in-out hover:scale-95">
+                    <div><img src="./assets/menu/menu4.png" alt="menu1" class="rounded-xl"></div>
+                    <div class="flex justify-between items-center my-2">
+                        <p class="font-semibold">Artisan Desserts</p>
+                        <span class="bg-[#E8FFEF] rounded-full w-8 h-8 flex items-center justify-center">
+                            <i class="fa-solid fa-arrow-right-long"></i>
+                        </span>
+                    </div>
+                </a>
             </div>
 
         </section>
@@ -177,7 +183,7 @@
                             class="fa-solid fa-arrow-right-long ml-2"></i></button>
                 </div>
             </div>
-            <div id="popular-dishes" class="grid grid-cols-4 gap-4 my-8"></div>
+            <div id="popular-dishes" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-8"></div>
 
         </section>
 
@@ -191,7 +197,7 @@
                     speed.
                 </p>
             </div>
-            <div class="grid grid-cols-4 my-8 gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 my-8 gap-4">
                 <div
                     class="bg-white p-3 rounded-2xl flex flex-col gap-2 pl-8 transition-transform duration-300 ease-in-out hover:scale-95">
                     <p class="bg-[#E8FFEF] rounded-lg w-10 h-10 flex items-center justify-center"><i

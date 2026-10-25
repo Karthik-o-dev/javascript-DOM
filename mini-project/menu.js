@@ -32,7 +32,106 @@ const addToCart = (recipe) => {
     localStorage.setItem("cart", JSON.stringify(cart));
     document.dispatchEvent(new Event("cartUpdated"));
     console.log(cart)
+
 };
+
+
+const recipeModal = document.getElementById("recipe-modal");
+const closeRecipeModal = document.getElementById("close-recipe-modal");
+
+const modalRecipeImage = document.getElementById("modal-recipe-image");
+const modalRecipeName = document.getElementById("modal-recipe-name");
+const modalRecipeCuisine = document.getElementById("modal-recipe-cuisine");
+const modalRecipeRating = document.getElementById("modal-recipe-rating");
+const modalRecipeTime = document.getElementById("modal-recipe-time");
+const modalRecipeServings = document.getElementById("modal-recipe-servings");
+const modalRecipePrice = document.getElementById("modal-recipe-price");
+const modalRecipeIngredients = document.getElementById("modal-recipe-ingredients");
+const modalRecipeInstructions = document.getElementById("modal-recipe-instructions");
+
+const modalQuantity = document.getElementById("modal-quantity");
+const modalQuantityMinus = document.getElementById("modal-quantity-minus");
+const modalQuantityPlus = document.getElementById("modal-quantity-plus");
+const modalAddToCart = document.getElementById("modal-add-to-cart");
+
+let selectedRecipe = null;
+let selectedQuantity = 1;
+
+const openRecipeModal = (recipe) => {
+    selectedRecipe = recipe;
+    selectedQuantity = 1;
+
+    modalRecipeImage.src = recipe.image;
+    modalRecipeImage.alt = recipe.name;
+
+    modalRecipeName.textContent = recipe.name;
+    modalRecipeCuisine.textContent = recipe.cuisine;
+    modalRecipeRating.textContent = `⭐ ${recipe.rating}`;
+    modalRecipeTime.textContent = `🕒 ${recipe.prepTimeMinutes + recipe.cookTimeMinutes} min`;
+    modalRecipeServings.textContent = `🍽️ ${recipe.servings} servings`;
+    modalRecipePrice.textContent = `$${getRecipePrice(recipe).toFixed(2)}`;
+
+    modalRecipeIngredients.innerHTML = "";
+    recipe.ingredients.forEach(ingredient => {
+        const li = document.createElement("li");
+        li.textContent = ingredient;
+        modalRecipeIngredients.appendChild(li);
+    });
+
+    modalRecipeInstructions.innerHTML = "";
+    recipe.instructions.forEach(instruction => {
+        const li = document.createElement("li");
+        li.textContent = instruction;
+        modalRecipeInstructions.appendChild(li);
+    });
+
+    modalQuantity.textContent = selectedQuantity;
+
+    recipeModal.classList.remove("hidden");
+    recipeModal.classList.add("flex");
+
+    document.body.classList.add("overflow-hidden");
+};
+
+const hideRecipeModal = () => {
+    recipeModal.classList.add("hidden");
+    recipeModal.classList.remove("flex");
+
+    document.body.classList.remove("overflow-hidden");
+
+    selectedRecipe = null;
+};
+
+closeRecipeModal.addEventListener("click", hideRecipeModal);
+
+recipeModal.addEventListener("click", (event) => {
+    if (event.target === recipeModal) {
+        hideRecipeModal();
+    }
+});
+
+modalQuantityMinus.addEventListener("click", () => {
+    if (selectedQuantity > 1) {
+        selectedQuantity--;
+        modalQuantity.textContent = selectedQuantity;
+    }
+});
+
+modalQuantityPlus.addEventListener("click", () => {
+    selectedQuantity++;
+    modalQuantity.textContent = selectedQuantity;
+});
+
+modalAddToCart.addEventListener("click", () => {
+    if (!selectedRecipe) return;
+
+    for (let i = 0; i < selectedQuantity; i++) {
+        addToCart(selectedRecipe);
+    }
+
+    hideRecipeModal();
+});
+
 
 const displayRecipes = (recipes) => {
     menuContainer.innerHTML = "";
@@ -49,6 +148,11 @@ const displayRecipes = (recipes) => {
     pageRecipes.forEach(recipe => {
         const card = document.createElement("div");
         card.className = "dishes";
+        card.classList.add("cursor-pointer");
+
+        card.addEventListener("click", () => {
+            openRecipeModal(recipe);
+        });
 
         const img = document.createElement("img");
         img.src = recipe.image;
@@ -72,7 +176,8 @@ const displayRecipes = (recipes) => {
         const button = document.createElement("button");
         button.innerHTML = "Add";
         button.className = "bg-[#FF6B21] text-white px-4 py-2 rounded-full cursor-pointer";
-        button.addEventListener("click", () => {
+        button.addEventListener("click", (event) => {
+            event.stopPropagation();
             addToCart(recipe)
         })
 
@@ -147,6 +252,36 @@ const createPagination = (recipes) => {
 
 const loadRecipes = async () => {
     allRecipes = await getAllRecipes();
+
+    const params = new URLSearchParams(window.location.search);
+    const recipeId = params.get("recipeId");
+    const selectedCategory = params.get("category");
+
+    if (recipeId) {
+        const selectedRecipe = allRecipes.find(
+            recipe => recipe.id === Number(recipeId)
+        );
+
+        if (selectedRecipe) {
+            currentRecipes = allRecipes;
+            currentPage = 1;
+            displayRecipes(currentRecipes);
+
+            openRecipeModal(selectedRecipe);
+            return;
+        }
+    }
+
+    if (selectedCategory) {
+        const categoryButton = [...categoryButtons].find(button =>
+            button.dataset.category === selectedCategory
+        );
+        if (categoryButton) {
+            categoryButton.click();
+            return;
+        }
+    }
+
     currentRecipes = allRecipes;
     currentPage = 1;
     displayRecipes(currentRecipes);
@@ -185,19 +320,19 @@ categoryButtons.forEach(button => {
 const getCategory = (recipe) => {
 
     if (recipe.mealType?.includes("Breakfast")) {
-        return "Breakfast";
+        return "breakfast";
     }
 
     if (recipe.mealType?.includes("Lunch")) {
-        return "Lunch";
+        return "lunch";
     }
 
     if (recipe.mealType?.includes("Dinner")) {
-        return "Dinner";
+        return "dinner";
     }
 
     if (recipe.mealType?.includes("Snack")) {
-        return "Snack";
+        return "snack";
     }
 
     return "Other";
@@ -223,3 +358,4 @@ searchInput.addEventListener("input", () => {
     currentPage = 1;
     displayRecipes(currentRecipes);
 });
+
