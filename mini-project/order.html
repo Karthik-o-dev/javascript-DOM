@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crave & Co.</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
@@ -14,7 +15,8 @@
 </head>
 
 <body class="bg-[#E8FFEF]">
-    <header class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2">
+    <header
+        class="flex flex-wrap justify-between items-center gap-3 bg-white my-2 mx-2 sm:mx-4 lg:mx-10 rounded-3xl lg:rounded-[100px] px-3 sm:px-5 lg:px-6 py-3 sticky top-2 z-[1500]">
         <div class="flex items-center">
             <a href="./home.html"><img src="./assets/title.png" alt="title" class="h-8"></a>
 
@@ -25,8 +27,11 @@
 
         </div>
 
-        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-[100px] ml-[115px]">
-            <ul class="flex items-center gap-8 font-semibold text-gray-500">
+
+        <nav class="bg-[#E8FFEF] p-2 px-3 sm:px-5 rounded-full mx-auto lg:mx-0">
+            <ul
+                class="flex flex-wrap items-center justify-center gap-3 sm:gap-5 lg:gap-8 font-semibold text-gray-500 text-sm sm:text-base">
+
                 <li><a href="./home.html">Home</a></li>
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -34,9 +39,6 @@
             </ul>
         </nav>
 
-        <div class="flex gap-3">
-
-        </div>
         <div id="profile-section" class="hidden relative">
             <button id="profile-button" type="button"
                 class="flex items-center gap-2 rounded-full border border-gray-200 bg-white px-4 py-2 font-semibold text-[#003B20] cursor-pointer">
@@ -71,17 +73,18 @@
     </header>
 
     <main>
-        <section id="order" class=" px-10 my-10">
-            <div class="flex justify-between items-center">
+        <section id="order" class="px-4 sm:px-6 lg:px-10 my-6 sm:my-10">
+            <div class="flex flex-col lg:flex-row lg:justify-between lg:items-center gap-4">
                 <div>
                     <p class="text-amber-900 font-semibold text-[12px]">ORDER HISTORY</p>
-                    <p class="font-bold text-4xl ">Your Past & Active Feasts</p>
-                    <p class="text-[16px] text-gray-600 mt-3">Reorder favorites or check your current kitchen tracker.
+                    <p class="font-bold text-2xl sm:text-3xl lg:text-4xl">Your Past & Active Feasts</p>
+                    <p class="text-sm sm:text-base text-gray-600 mt-3">Reorder favorites or check your current kitchen
+                        tracker.
                     </p>
                 </div>
                 <div>
                     <button
-                        class="bg-[#FF6B21] p-2 px-5 rounded-[100px] text-white font-semibold transition-transform duration-300 ease-in-out hover:scale-95"><a
+                        class="bg-[#FF6B21] p-2 px-4 sm:px-5 rounded-full text-white font-semibold text-sm sm:text-base transition-transform duration-300 ease-in-out hover:scale-95"><a
                             href="./menu.html">+ Order Something New</a></button>
                 </div>
 
@@ -93,10 +96,10 @@
     </main>
 
     <footer class="bg-[#003B20] bottom-0">
-        <section class="px-10 py-10">
-            <div class="grid grid-cols-4 gap-4">
+        <section class="px-4 sm:px-6 lg:px-10 mt-10 sm:mt-16 lg:mt-20 py-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8">
                 <div>
-                    <p class="font-bold text-xl text-white mb-2">Crave & Co.</p>
+                    <p class=" font-bold text-xl text-white mb-2">Crave & Co.</p>
                     <p class="text-orange-200 text-sm font-semibold mb-1">Good Food. Great Mood.</p>
                     <p class="text-gray-400 text-sm">Crafting farm-fresh artisan culinary moments daily. Sourced with
                         integrity,

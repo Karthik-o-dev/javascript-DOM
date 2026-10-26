@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Crave & Co.</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="./home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
@@ -13,7 +14,8 @@
 </head>
 
 <body class="bg-[#E8FFEF]">
-    <header class="flex justify-between items-center bg-white my-2 mx-10 rounded-[100px] px-6 py-2 sticky top-2 ">
+    <header
+        class="flex flex-wrap justify-between items-center gap-3 bg-white my-2 mx-2 sm:mx-4 lg:mx-10 rounded-3xl lg:rounded-[100px] px-3 sm:px-5 lg:px-6 py-3 sticky top-2">
         <div class="flex items-center">
             <a href="./home.html"><img src="./assets/title.png" alt="title" class="h-8"></a>
 
@@ -24,8 +26,9 @@
 
         </div>
 
-        <nav class="bg-[#E8FFEF] p-2 px-5 rounded-full">
-            <ul class="flex items-center gap-8 font-semibold text-gray-500">
+        <nav class="bg-[#E8FFEF] p-2 px-3 sm:px-5 rounded-full mx-auto lg:mx-0">
+            <ul
+                class="flex flex-wrap justify-center items-center gap-3 sm:gap-5 lg:gap-8 font-semibold text-gray-500 text-sm sm:text-base">
                 <li><a href="./home.html">Home</a></li>
                 <li><a href="./menu.html">Menu</a></li>
                 <li><a href="./about.html">About</a></li>
@@ -73,21 +76,21 @@
     </header>
 
     <main>
-        <section id="menu" class="mt-10 px-10">
-            <div class="flex justify-between">
+        <section id="menu" class="mt-6 sm:mt-10 px-4 sm:px-6 lg:px-10">
+            <div class="flex flex-col md:flex-row md:justify-between md:items-center gap-4">
                 <div>
                     <p class="text-amber-900 font-semibold text-[12px]">THE FULL CATALOG</p>
-                    <p class="font-bold text-4xl ">Explore Our Fresh Kitchen</p>
+                    <p class="font-bold text-2xl sm:text-3xl lg:text-4xl">Explore Our Fresh Kitchen</p>
                     <p class="text-gray-500">Handcrafted culinary creations ready for immediate delivery.</p>
                 </div>
-                <div class="bg-white rounded-full flex items-center w-[280px] h-[40px] px-4 gap-2">
+                <div class="bg-white rounded-full flex items-center  w-full md:w-[280px] h-10 px-4 gap-2">
                     <i class="fa-solid fa-magnifying-glass text-sm text-gray-700"></i>
                     <input id="recipe-search" type="text" placeholder="Search for dishes, cuisines, ingredients."
-                        class="w-full outline-none text-xs text-gray-700 placeholder:text-gray-400">
+                        class="w-full min-w-0 outline-none text-xs text-gray-700 placeholder:text-gray-400">
                 </div>
             </div>
 
-            <div class="flex gap-3 my-4">
+            <div class="flex flex-wrap gap-2 sm:gap-3 my-4">
                 <button data-category="all"
                     class="category-btn bg-black text-white rounded-full px-3 py-2 text-xs font-semibold cursor-pointer">All
                     Dishes</button>
@@ -106,7 +109,7 @@
                     Snacks</button>
             </div>
 
-            <div id="menu-container" class="grid grid-cols-4 gap-4"></div>
+            <div id="menu-container" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4"></div>
 
             <div id="pagination" class="flex justify-center items-center gap-2 mt-8 mb-10"></div>
         </section>
@@ -114,42 +117,42 @@
 
 
     <footer class="bg-[#003B20]">
-        <section class="px-10 mt-20 py-10">
-            <div class="grid grid-cols-4 gap-4">
+        <section class="px-4 sm:px-6 lg:px-10 mt-10 sm:mt-16 lg:mt-20 py-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"">
                 <div>
-                    <p class="font-bold text-xl text-white mb-2">Crave & Co.</p>
-                    <p class="text-orange-200 text-sm font-semibold mb-1">Good Food. Great Mood.</p>
-                    <p class="text-gray-400 text-sm">Crafting farm-fresh artisan culinary moments daily. Sourced with
-                        integrity,
-                        prepared with mindful
-                        passion, and delivered warm to your table.</p>
-                </div>
+                    <p class=" font-bold text-xl text-white mb-2">Crave & Co.</p>
+                <p class="text-orange-200 text-sm font-semibold mb-1">Good Food. Great Mood.</p>
+                <p class="text-gray-400 text-sm">Crafting farm-fresh artisan culinary moments daily. Sourced with
+                    integrity,
+                    prepared with mindful
+                    passion, and delivered warm to your table.</p>
+            </div>
 
-                <div>
-                    <p class="font-bold text-xl text-white mb-2">Explore</p>
-                    <ul class="text-gray-400 text-sm mb-1">
-                        <li><a href="./menu.html">Menu</a></li>
-                        <li>Popular Dishes</li>
-                        <li>Why Us</li>
-                        <li>Dietary Guide</li>
-                    </ul>
-                </div>
+            <div>
+                <p class="font-bold text-xl text-white mb-2">Explore</p>
+                <ul class="text-gray-400 text-sm mb-1">
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li>Popular Dishes</li>
+                    <li>Why Us</li>
+                    <li>Dietary Guide</li>
+                </ul>
+            </div>
 
-                <div>
-                    <p class="font-bold text-xl text-white mb-2">Company</p>
-                    <ul class="text-gray-400 text-sm mb-1">
-                        <li><a href="./about.html">About</a></li>
-                        <l>Contact</li>
-                            <li>Admin Portal</li>
-                            <li>Partner Farmers</li>
-                    </ul>
-                </div>
+            <div>
+                <p class="font-bold text-xl text-white mb-2">Company</p>
+                <ul class="text-gray-400 text-sm mb-1">
+                    <li><a href="./about.html">About</a></li>
+                    <l>Contact</li>
+                        <li>Admin Portal</li>
+                        <li>Partner Farmers</li>
+                </ul>
+            </div>
 
-                <div>
-                    <p class="font-bold text-xl text-white mb-2">Stay Nourished</p>
-                    <p class="text-gray-400 text-sm">Subscribe for seasonal specials, secret kitchen recipes, and member
-                        tastings.</p>
-                </div>
+            <div>
+                <p class="font-bold text-xl text-white mb-2">Stay Nourished</p>
+                <p class="text-gray-400 text-sm">Subscribe for seasonal specials, secret kitchen recipes, and member
+                    tastings.</p>
+            </div>
 
 
             </div>
@@ -204,19 +207,20 @@
     <div id="recipe-modal"
         class="hidden fixed inset-0 z-[2000] bg-black/10 backdrop-blur-md  items-center justify-center p-4">
         <div id="recipe-modal-content"
-            class="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-3xl p-5 scrollbar-none overflow-auto ">
+            class="relative bg-white w-full max-w-4xl max-h-[90vh] overflow-y-auto rounded-2xl sm:rounded-3xl p-4 sm:p-6 scrollbar-none overflow-auto ">
             <button id="close-recipe-modal"
                 class="absolute top-2 right-4 w-10 h-10 rounded-full bg-white text-lg text-black hover:bg-gray-100 cursor-pointer">&times;</button>
 
-            <div class="flex gap-4">
-                <div class="">
-                    <img id="modal-recipe-image" src="" alt="" class="object-cover rounded-md w-50 h-50">
+            <div class="flex flex-col sm:flex-row gap-4">
+                <div class="w-full sm:w-auto shrink-0">
+                    <img id="modal-recipe-image" src="" alt=""
+                        class="object-cover rounded-md w-full h-56 sm:w-50 sm:h-50">
                 </div>
                 <div class="">
                     <p id="modal-recipe-cuisine" class="text-sm text-[#FF6B21] font-semibold mb-2">
                     </p>
 
-                    <h2 id="modal-recipe-name" class="text-2xl md:text-3xl font-bold text-[#003B20] mb-3">
+                    <h2 id="modal-recipe-name" class="text-xl sm:text-2xl md:text-3xl font-bold text-[#003B20] mb-3">
                     </h2>
 
                     <div class="flex flex-wrap gap-4 text-sm text-gray-600 mb-5">
@@ -230,7 +234,7 @@
                 </div>
             </div>
 
-            <div class="flex justify-between gap-4">
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 <div class="mb-6">
                     <h3 class="text-lg font-bold text-[#003B20] mb-3">
                         Ingredients

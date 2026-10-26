@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crave & Co.</title>
+    <link rel="icon" type="image/png" href="./assets/favicon.png">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.min.css"
         integrity="sha512-QeR2VH+lsBE5LSAe1Q5EnTBbe7XTBubt8dG93Y7gidSgdMCr8nVqKcfKAMyN96SV8KDbZVTDXChatu5G2KQGzg=="
@@ -16,13 +17,13 @@
 
 <body class="bg-[#E8FFEF]">
     <header
-        class="flex justify-between items-center bg-white my-2 mx-2 sm:mx-4 lg:mx-10 rounded-3xl lg:rounded-[100px] px-6 py-2 sticky top-2 z-[1500]">
+        class="flex flex-wrap justify-between items-center bg-white my-2 mx-2 sm:mx-4 lg:mx-10 rounded-3xl lg:rounded-[100px] px-6 py-2 sticky top-2 z-[1500]">
         <div class="flex items-center">
             <a href="./home.html"><img src="./assets/title.png" alt="title" class="h-8"></a>
 
             <div>
-                <h1 class="font-semibold text-lg hidden md:block">Crave & Co.</h1>
-                <h2 class="text-[10px] hidden md:block">Good Food. Great Mood.</h2>
+                <h1 class="font-semibold text-lg">Crave & Co.</h1>
+                <h2 class="text-[10px]">Good Food. Great Mood.</h2>
             </div>
 
         </div>
@@ -239,42 +240,42 @@
     </main>
 
     <footer class="bg-[#003B20]">
-        <section class="px-10 mt-20 py-10">
-            <div class="grid grid-cols-4 gap-4">
+        <section class="px-4 sm:px-6 lg:px-10 mt-10 sm:mt-16 lg:mt-20 py-10">
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"">
                 <div>
-                    <p class="font-bold text-xl text-white mb-2">Crave & Co.</p>
-                    <p class="text-orange-200 text-sm font-semibold mb-1">Good Food. Great Mood.</p>
-                    <p class="text-gray-400 text-sm">Crafting farm-fresh artisan culinary moments daily. Sourced with
-                        integrity,
-                        prepared with mindful
-                        passion, and delivered warm to your table.</p>
-                </div>
+                    <p class=" font-bold text-xl text-white mb-2">Crave & Co.</p>
+                <p class="text-orange-200 text-sm font-semibold mb-1">Good Food. Great Mood.</p>
+                <p class="text-gray-400 text-sm">Crafting farm-fresh artisan culinary moments daily. Sourced with
+                    integrity,
+                    prepared with mindful
+                    passion, and delivered warm to your table.</p>
+            </div>
 
-                <div>
-                    <p class="font-bold text-xl text-white mb-2">Explore</p>
-                    <ul class="text-gray-400 text-sm mb-1">
-                        <li><a href="./menu.html">Menu</a></li>
-                        <li>Popular Dishes</li>
-                        <li>Why Us</li>
-                        <li>Dietary Guide</li>
-                    </ul>
-                </div>
+            <div>
+                <p class="font-bold text-xl text-white mb-2">Explore</p>
+                <ul class="text-gray-400 text-sm mb-1">
+                    <li><a href="./menu.html">Menu</a></li>
+                    <li>Popular Dishes</li>
+                    <li>Why Us</li>
+                    <li>Dietary Guide</li>
+                </ul>
+            </div>
 
-                <div>
-                    <p class="font-bold text-xl text-white mb-2">Company</p>
-                    <ul class="text-gray-400 text-sm mb-1">
-                        <li><a href="./about.html">About</a></li>
-                        <l>Contact</li>
-                            <li>Admin Portal</li>
-                            <li>Partner Farmers</li>
-                    </ul>
-                </div>
+            <div>
+                <p class="font-bold text-xl text-white mb-2">Company</p>
+                <ul class="text-gray-400 text-sm mb-1">
+                    <li><a href="./about.html">About</a></li>
+                    <l>Contact</li>
+                        <li>Admin Portal</li>
+                        <li>Partner Farmers</li>
+                </ul>
+            </div>
 
-                <div>
-                    <p class="font-bold text-xl text-white mb-2">Stay Nourished</p>
-                    <p class="text-gray-400 text-sm">Subscribe for seasonal specials, secret kitchen recipes, and member
-                        tastings.</p>
-                </div>
+            <div>
+                <p class="font-bold text-xl text-white mb-2">Stay Nourished</p>
+                <p class="text-gray-400 text-sm">Subscribe for seasonal specials, secret kitchen recipes, and member
+                    tastings.</p>
+            </div>
 
 
             </div>
@@ -282,7 +283,7 @@
     </footer>
 
     <div id="signup-box" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-[2000] p-4">
-        <div class="bg-white relative w-full max-w-md rounded-3xl p-8">
+        <div class="bg-white relative w-full max-w-md rounded-3xl p-4 sm:p-8 max-h-[90vh] overflow-y-auto">
             <button id="close-signup" class="absolute top-4 right-5 text-2xl text-gray-500 hover:text-black"
                 type="button">&times;
             </button>
@@ -343,7 +344,7 @@
     </div>
 
     <div id="login-box" class="fixed inset-0 bg-black/50 hidden justify-center items-center z-[2000] p-4">
-        <div class="bg-white relative w-full max-w-md rounded-3xl p-8">
+        <div class="bg-white relative w-full max-w-md rounded-3xl p-4 sm:p-8 max-h-[90vh] overflow-y-auto">
             <button id="close-login" class="absolute top-4 right-5 text-2xl text-gray-500 hover:text-black"
                 type="button">&times;
             </button>
