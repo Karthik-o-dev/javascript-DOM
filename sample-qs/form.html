@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+
+<body class="fixed inset-0 flex justify-center items-center z-[2000] p-4">
+    <div class="bg-white relative w-full max-w-md rounded-3xl p-4 sm:p-8 max-h-[90vh] shadow-md">
+        <form id="signup-form" class=" flex flex-col gap-2">
+            <p class="text-center font-mono font-bold text-2xl">welcome</p>
+
+            <div class="flex flex-col gap-1">
+                <label for="name">name</label>
+                <input type="text" name="name" id="name" placeholder="Enter the name" class="border p-2 rounded-md">
+                <span id="name-error" class="text-red-600 text-sm font-mono"></span>
+            </div>
+
+            <div class="flex flex-col gap-1">
+                <label for="email">email</label>
+                <input type="email" name="email" id="email" placeholder="Enter the email" class="border p-2 rounded-md">
+                <span id="email-error" class="text-red-600 text-sm font-mono"></span>
+
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="password">password</label>
+                <input type="password" name="password" id="password" placeholder="Enter the password"
+                    class="border p-2 rounded-md">
+                <span id="password-error" class="text-red-600 text-sm font-mono"></span>
+            </div>
+            <div class="flex flex-col gap-1">
+                <label for="confirm-password">Confirm password</label>
+                <input type="password" name="confirm-password" id="confirm-password"
+                    placeholder="Enter the confirm password" class="border p-2 rounded-md">
+                <span id="confirm-error" class="text-red-600 text-sm font-mono"></span>
+            </div>
+
+            <button type="submit" class="bg-emerald-300 p-2 rounded-md text-white">Submit</button>
+            <span id="success-message" class="text-green-600 text-sm font-mono"></span>
+
+        </form>
+    </div>
+    <script src=" form.js"></script>
+</body>
+
+</html>
