@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <header class="border-b p-5 flex justify-between items-center px-10">
+        <h1 class="text-3xl font-bold">Product List</h1>
+        <button class="bg-black text-white px-4 py-2 rounded-md">Cart <span id="cart-count">0</span></button>
+    </header>
+
+    <div id="product-container" class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 p-10 "></div>
+
+    <script src="./product.js"></script>
+</body>
+
+</html>
