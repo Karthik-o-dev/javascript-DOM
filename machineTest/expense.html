@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <h1>Daily Expense Tracker</h1>
+
+    <form id="form">
+
+        <div>
+            <label for="Expense-amount">Expense Amount</label>
+            <input type="number" id="amount" placeholder="Enter the Amount">
+        </div>
+
+        <div>
+            <label for="Category">Category</label>
+            <select name="Category" id="category">
+                <option value="Food">Food</option>
+                <option value="Travel">Travel</option>
+                <option value="Shopping">Shopping</option>
+                <option value="Others">Others</option>
+            </select>
+        </div>
+
+        <div>
+            <label for="Description">Description</label>
+            <input type="text" id="description" placeholder="For what?">
+        </div>
+
+        <button type="submit">Add Expense</button>
+    </form>
+
+    <p id="total-expense"></p>
+
+    <table class="flex flex-col gap-2" id="expense-list">
+        <tr>
+            <th>Amount</th>
+            <th>Category</th>
+            <th>Description</th>
+            <th>Action</th>
+        </tr>
+    </table>
+
+
+
+    <script src="./expense.js"></script>
+</body>
+
+</html>
